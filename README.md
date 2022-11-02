@@ -1,4 +1,4 @@
 Game off game
 
 Design:
-![alt text] (./design.png)
+![Screenshot](design.png)
