@@ -17,7 +17,6 @@ public class Action : MonoBehaviour
     
     void DisableTrigger(Trigger trigger)
     {
-        Debug.Log("Disabled trigger");
         trigger.enabled = false;
     }
 }
