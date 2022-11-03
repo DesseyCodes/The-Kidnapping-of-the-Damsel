@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Action.cs and Trigger.cs can't be used by themselves.
+
 public class Action : MonoBehaviour
 {
     [SerializeField] bool disableTrigger;
