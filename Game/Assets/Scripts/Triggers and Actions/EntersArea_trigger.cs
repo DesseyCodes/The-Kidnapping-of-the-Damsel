@@ -6,6 +6,11 @@ public class EntersArea_trigger : Trigger
 {
     [SerializeField] string gameObjectTag;
     
+    void Start()
+    {
+        
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == gameObjectTag)

@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Action : MonoBehaviour
 {
+    [SerializeField] Trigger trigger;
     [SerializeField] bool disableTrigger;
-    
+        
     void Start()
     {
-        Trigger trigger = GetComponent<Trigger>();
-        
-        if(disableTrigger) DisableTrigger(trigger);
+        if(disableTrigger) DisableTrigger();
     }
     
-    void DisableTrigger(Trigger trigger)
+    void DisableTrigger()
     {
         trigger.enabled = false;
     }
