@@ -5,6 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D playerRB;
+    private SpriteRenderer playerSR;
+
+    public Transform launchOffset;
+
+    public Sprite[] spriteDir;
+
+    public float yBorder = 4f;
+    public float xBorder = 8f;
 
     public float pSpeed = 4f;
 
@@ -12,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public float rockSpeed;
     private bool hasRock;
 
+    public bool game;
 
 
     Vector2 pMovement; // We'll set this variable in the update method
@@ -19,7 +28,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
+        playerSR = GetComponent<SpriteRenderer>();
         hasRock = true;
+        game = true;
     }
 
     // Update is called once per frame
@@ -29,23 +40,49 @@ public class PlayerController : MonoBehaviour
         pMovement.x = Input.GetAxisRaw("Horizontal");
         pMovement.y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetButtonDown("Fire1") && hasRock == true)
+        if (Input.GetKeyDown(KeyCode.Space) && hasRock == true)
         {
             Throw(); // Throw method created down below
         }
+
+        if (Input.GetAxisRaw("Horizontal") == -1)
+        {
+            playerSR.sprite = spriteDir[0];
+        }
+
+        if (Input.GetAxisRaw("Horizontal") == 1)
+        {
+            playerSR.sprite = spriteDir[1];
+        }
+
+        if (Input.GetAxisRaw("Vertical") == -1)
+        {
+            playerSR.sprite = spriteDir[2];
+        }
+
+        if (Input.GetAxisRaw("Vertical") == 1)
+        {
+            playerSR.sprite = spriteDir[3];
+        }
+
+
     }
 
     private void FixedUpdate()
     {
         playerRB.MovePosition(playerRB.position + pMovement * pSpeed * Time.fixedDeltaTime); // The lovely Time.fixedDeltaTime prevents those of use with super fast computers from going crazy fast
+
     }
+
+
 
     public void Throw()
     {
         // Instantiate the rockProjectile object at the player's position and the player's rotation
-        GameObject rock = Instantiate(rockProjectile, transform.position, transform.rotation);
+        GameObject rock = Instantiate(rockProjectile, launchOffset.position, launchOffset.rotation);
         Rigidbody2D rockRB = rock.GetComponent<Rigidbody2D>();
-        rockRB.AddForce(Vector2.up * rockSpeed, ForceMode2D.Impulse); // Apply an impulse force in the direction that would be up
+        rockRB.AddForce(new Vector2 (transform.position.x +1, transform.position.y +1) * rockSpeed, ForceMode2D.Impulse); // Apply an impulse force in the direction that would be up
         hasRock = false; // Set hasRock to false
     }
+        
 }
