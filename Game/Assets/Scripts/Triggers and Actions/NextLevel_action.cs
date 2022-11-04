@@ -8,7 +8,7 @@ public class NextLevel_action : Action
 {
     [SerializeField] string levelName;
     [SerializeField] Image fadeImage;
-    // + Add a time variable
+    // + Add a timeToFade variable
     void Start()
     {
         if(fadeImage == null) 
