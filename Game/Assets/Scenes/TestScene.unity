@@ -1148,7 +1148,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -471835625, guid: 89b3dd5924a0e4e45873f3ddce0de308, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1190,7 +1190,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000007450581, y: 0.0020800382}
+  m_Offset: {x: -0.0011560023, y: -0.0035770983}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1201,7 +1201,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19087966, y: 0.28919974}
+  m_Size: {x: 0.17931959, y: 0.3010055}
   m_EdgeRadius: 0
 --- !u!1 &1068157588
 GameObject:
@@ -1386,9 +1386,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81fbb819e9672094b9c67ce776f0404c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableTrigger: 0
+  disableTrigger: 1
   levelName: PlayerTesting
   fadeImage: {fileID: 1489044002}
+  secondsToFade: 3
 --- !u!114 &1221869798
 MonoBehaviour:
   m_ObjectHideFlags: 0

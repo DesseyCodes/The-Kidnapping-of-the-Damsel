@@ -10,6 +10,9 @@ public class Trigger : MonoBehaviour
 
     protected void EnableAction()
     {
-        action.enabled = true;
+        if (action == null)
+            Debug.Log(gameObject.name + ": No action set to this trigger");
+        else
+            action.enabled = true;
     }
 }

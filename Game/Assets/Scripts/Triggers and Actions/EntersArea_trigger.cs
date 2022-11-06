@@ -8,7 +8,7 @@ public class EntersArea_trigger : Trigger
     
     void Start()
     {
-
+        
     }
 
     void OnTriggerEnter2D(Collider2D other)

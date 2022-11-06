@@ -13,6 +13,8 @@ public class PlaySound_action : Action
 
     void Start()
     {
+        DisableTrigger();
+
         audioSource = GetComponent<AudioSource>();
 
         if(playAtPoint) 

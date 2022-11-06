@@ -7,18 +7,11 @@ using UnityEngine;
 public class Action : MonoBehaviour
 {
     [SerializeField] bool disableTrigger;
-        
-    void Start()
+    
+    //DisableTrigger must be called by every action because they can't call the base Start().
+    protected void DisableTrigger()
     {
         if(disableTrigger)
-        {
-            Trigger trigger = GetComponent<Trigger>();
-            DisableTrigger(trigger);
-        }
-    }
-    
-    void DisableTrigger(Trigger trigger)
-    {
-        trigger.enabled = false;
+            GetComponent<Trigger>().enabled = false;
     }
 }
