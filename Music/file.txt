@@ -1,0 +1,1 @@
+This file has to be added, as GitHub doesn't track empty folders. Add this to the .gitignore
