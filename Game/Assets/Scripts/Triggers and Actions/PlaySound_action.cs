@@ -25,5 +25,7 @@ public class PlaySound_action : Action
             
         else if(playContinuously && !audioSource.isPlaying)
             audioSource.Play();
+
+        SignalActionSequencer();
     }
 }
