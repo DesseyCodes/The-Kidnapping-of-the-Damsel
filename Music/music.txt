@@ -1,0 +1,1 @@
+GitHub doesn't allow the creation of new folders without a file, since it doesn't track empty folders. Add this file to the .gitignore.
