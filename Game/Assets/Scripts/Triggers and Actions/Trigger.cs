@@ -12,10 +12,12 @@ public class Trigger : MonoBehaviour
 
     protected void EnableAction()
     {
-        if (action == null || actionSequencer == null)
+        if (action == null && actionSequencer == null)
             Debug.Log(gameObject.name + ": No actions set to this trigger");
+
         else if(action != null)
             action.enabled = true;
+            
         else
             actionSequencer.enabled = true;
     }

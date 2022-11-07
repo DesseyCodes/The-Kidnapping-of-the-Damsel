@@ -16,11 +16,23 @@ public class FadeImage_action : Action
             StartCoroutine(FadeImageIn());
         else if(fadeImageOut)
             StartCoroutine(FadeImageOut());
+
+        SignalActionSequencer();
     }
 
-    // + Refactor to use a single coroutine for fading in or out.
+    // + Trying to use a single coroutine for fading in or out.
     IEnumerator FadeImage()
     {
+        fadeImage.enabled = true;
+        Color c = fadeImage.color;
+        if (fadeImageIn) 
+            c.a = 0.0f;
+        else if(fadeImageOut) 
+            c.a = 1.0f;
+        fadeImage.color = c;
+
+        float stepToFade = 1.0f/secondsToFade;
+
         yield return null;
     }
     IEnumerator FadeImageIn()

@@ -21,7 +21,7 @@ public class NextLevel_action : Action
     IEnumerator NextLevelTransition()
     {
         fadeImage.enabled = true;
-        Color c = fadeImage.color; // Changing the color alpha (a) directly doesn't work, so the color must be stored in the 'c' variable.
+        Color c = fadeImage.color; // The color alpha (a) can't be changed directly, so the color must be stored in the 'c' variable.
         c.a = 0.0f;
         fadeImage.color = c; 
         float stepToFade = 1.0f/secondsToFade; //Converting seconds to steps towards 100% opaque.

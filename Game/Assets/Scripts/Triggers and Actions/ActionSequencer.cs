@@ -6,6 +6,8 @@ public class ActionSequencer : MonoBehaviour
 {
     //Stores a sequence of actions
     //Enables the next action when the previous one ends.
+    //Currently, it can trigger only once.
+
     [SerializeField] Action[] actions;
     int actionIndex;
     void Start()
