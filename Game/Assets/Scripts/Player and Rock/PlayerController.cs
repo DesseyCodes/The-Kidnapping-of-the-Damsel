@@ -11,9 +11,6 @@ public class PlayerController : MonoBehaviour
 
     public Sprite[] spriteDir;
 
-    public float yBorder = 4f;
-    public float xBorder = 8f;
-
     public float pSpeed = 4f;
 
     public GameObject rockProjectile;
@@ -40,6 +37,12 @@ public class PlayerController : MonoBehaviour
         pMovement.x = Input.GetAxisRaw("Horizontal");
         pMovement.y = Input.GetAxisRaw("Vertical");
 
+
+    }
+
+    private void FixedUpdate()
+    {
+        playerRB.MovePosition(playerRB.position + pMovement * pSpeed * Time.fixedDeltaTime); // The lovely Time.fixedDeltaTime prevents those of use with super fast computers from going crazy fast
         if (Input.GetKeyDown(KeyCode.Space) && hasRock == true)
         {
             Throw(); // Throw method created down below
@@ -64,13 +67,6 @@ public class PlayerController : MonoBehaviour
         {
             playerSR.sprite = spriteDir[3];
         }
-
-
-    }
-
-    private void FixedUpdate()
-    {
-        playerRB.MovePosition(playerRB.position + pMovement * pSpeed * Time.fixedDeltaTime); // The lovely Time.fixedDeltaTime prevents those of use with super fast computers from going crazy fast
 
     }
 
