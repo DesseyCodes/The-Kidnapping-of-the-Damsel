@@ -13,11 +13,7 @@ public class NextLevel_action : Action
     {
         DisableTrigger();
 
-        if(fadeImage == null) 
-            Debug.Log(gameObject.name + ": No image set to 'fade image'.");
-        else if(secondsToFade < 0)
-            Debug.Log(gameObject.name + ": 'Seconds to fade' must be 0 or greater.");
-        else
+        if(CheckInput())
             StartCoroutine(NextLevelTransition());
     }
 
@@ -37,5 +33,22 @@ public class NextLevel_action : Action
             yield return null;
         }
         SceneManager.LoadScene(levelName, LoadSceneMode.Single);
+    }
+
+    bool CheckInput()
+    {
+        bool check = true;
+        
+        if(fadeImage == null)
+        {
+            Debug.Log(gameObject.name + ": No image set to 'fade image'.");
+            check = false;
+        } 
+        if(secondsToFade < 0)
+        {
+            Debug.Log(gameObject.name + ": 'Seconds to fade' must be 0 or greater.");
+            check = false;
+        }
+        return check;
     }
 }
