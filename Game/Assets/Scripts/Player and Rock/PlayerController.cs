@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         playerRB.MovePosition(playerRB.position + pMovement * pSpeed * Time.fixedDeltaTime); // The lovely Time.fixedDeltaTime prevents those of use with super fast computers from going crazy fast
-        if (Input.GetKeyDown(KeyCode.Space) && hasRock == true)
+        if (Input.GetMouseButtonDown(0) && hasRock == true)
         {
             Throw(); // Throw method created down below
         }
