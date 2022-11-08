@@ -11,11 +11,15 @@ public class FadeImage_action : Action
     void Start()
     {
         DisableTrigger();
-
+        
+        /*
         if(fadeImageIn)
             StartCoroutine(FadeImageIn());
         else if(fadeImageOut)
             StartCoroutine(FadeImageOut());
+        */
+        if(CheckInput())
+            StartCoroutine(FadeImage());
 
         if(!waitUntilEnd)
             SignalActionSequencer();
@@ -25,27 +29,48 @@ public class FadeImage_action : Action
     IEnumerator FadeImage()
     {
         fadeImage.enabled = true;
-        Color c = fadeImage.color;
-        if (fadeImageIn) 
-            c.a = 0.0f;
-        else if(fadeImageOut) 
-            c.a = 1.0f;
+        Color c = fadeImage.color; // The color alpha (a) can't be changed directly, so the color must be stored in the 'c' variable.
+        if (fadeImageIn) c.a = 0.0f;
+        else if(fadeImageOut) c.a = 1.0f;
         fadeImage.color = c;
 
-        float stepToFade = 1.0f/secondsToFade;
+        float stepToFade = 1.0f/secondsToFade; //Converting seconds to steps towards 100% opaque or transparent.
 
-        yield return null;
+        //Transition from transparent to fully opaque;
+        if(fadeImageIn)
+        {
+            while(c.a <= 1.0f)
+            {
+                c.a += stepToFade * Time.deltaTime;
+                fadeImage.color = c;
+                yield return null;
+            }
+        }
+            
+        else if(fadeImageOut)
+        {
+            while(c.a >= 0)
+            {
+                c.a -= stepToFade * Time.deltaTime;
+                fadeImage.color = c;
+                yield return null;
+            }
+            fadeImage.enabled = false;            
+        }
+
+        if(waitUntilEnd)
+            SignalActionSequencer();
     }
+
     IEnumerator FadeImageIn()
     {
         fadeImage.enabled = true;
-        Color c = fadeImage.color; // The color alpha (a) can't be changed directly, so the color must be stored in the 'c' variable.
+        Color c = fadeImage.color; 
         c.a = 0.0f;
         fadeImage.color = c;
 
-        float stepToFade = 1.0f/secondsToFade; //Converting seconds to steps towards 100% opaque.
+        float stepToFade = 1.0f/secondsToFade; 
 
-        //Transition from transparent to fully opaque;
         while(c.a <= 1.0f)
         {
             c.a += stepToFade * Time.deltaTime;
@@ -76,7 +101,7 @@ public class FadeImage_action : Action
         if(waitUntilEnd)
             SignalActionSequencer();
     }
-    
+
     //This is just to log better error messages.
     bool CheckInput()
     {

@@ -10,7 +10,7 @@ public class Action : MonoBehaviour
     [SerializeField] bool disableTrigger;
     [SerializeField] protected bool waitUntilEnd;
     protected float secondsToWait;
-    protected bool canSignal;
+    protected bool canSignal = true;
     
     //DisableTrigger must be called by every action because they can't call the base Start().
     protected void DisableTrigger()
@@ -26,10 +26,10 @@ public class Action : MonoBehaviour
         if(actionSequencer != null)
             actionSequencer.EnableNextAction();
     }
-    //Currently Update checks instead of WaitUntilEnd coroutine
+    //Currently using Update checks instead of WaitUntilEnd coroutine.
+    //Using this coroutine plus overriding feels a little confusing.
     protected virtual IEnumerator WaitUntilEnd()
     {
-        Debug.Log(gameObject.name + ": base WaitUnitlEnd() was called. secondsToWait is " + secondsToWait);
         yield return new WaitForSeconds(secondsToWait);
 
         SignalActionSequencer();

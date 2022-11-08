@@ -27,30 +27,22 @@ public class PlaySound_action : Action
         else if(playContinuously && !audioSource.isPlaying)
             audioSource.Play();
         
-
         if (waitUntilEnd)
-            timeToEnd = secondsToWait;
+            timeToEnd = audioclip.length;
         else
             timeToEnd = 0;
     }
     
     void Update()
     {
-        if(timeToEnd <= 0 && canSignal)
+        if(timeToEnd <= 0.0f && canSignal)
         {
             SignalActionSequencer();
             canSignal = false;
         }
-        else if(timeToEnd > 0)
+        else if(timeToEnd > 0.0f)
         {
             timeToEnd -= Time.deltaTime;
         }
-    }
-    //Using Update checks instead of WaitUntilEnd
-    protected override IEnumerator WaitUntilEnd()
-    {
-        secondsToWait = audioclip.length;
-        yield return null;
-        StartCoroutine(base.WaitUntilEnd());
     }
 }
