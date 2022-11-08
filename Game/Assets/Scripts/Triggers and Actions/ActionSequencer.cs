@@ -10,6 +10,7 @@ public class ActionSequencer : MonoBehaviour
 
     [SerializeField] Action[] actions;
     int actionIndex;
+    
     void Start()
     {
         actionIndex = 0;
