@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EntersArea_trigger : Trigger
+public class EntersArea : Trigger
 {
     [SerializeField] string gameObjectTag;
     

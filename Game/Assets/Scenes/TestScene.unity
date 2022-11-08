@@ -323,7 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTrigger: 0
   waitUntilEnd: 0
-  audioclip: {fileID: 8300000, guid: 4281dd1cb5bf3ed4882746fb659e4a13, type: 3}
+  audioclip: {fileID: 8300000, guid: 1bd973013a5a87948af5c6f451e55504, type: 3}
   volume: 0.25
   playContinuously: 0
   playOneShot: 1
@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTrigger: 1
   waitUntilEnd: 0
-  audioclip: {fileID: 8300000, guid: 4281dd1cb5bf3ed4882746fb659e4a13, type: 3}
+  audioclip: {fileID: 8300000, guid: 1bd973013a5a87948af5c6f451e55504, type: 3}
   volume: 0.25
   playContinuously: 0
   playOneShot: 1
@@ -1775,7 +1775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTrigger: 0
   waitUntilEnd: 1
-  audioclip: {fileID: 8300000, guid: 4281dd1cb5bf3ed4882746fb659e4a13, type: 3}
+  audioclip: {fileID: 8300000, guid: 1bd973013a5a87948af5c6f451e55504, type: 3}
   volume: 0.25
   playContinuously: 0
   playOneShot: 1

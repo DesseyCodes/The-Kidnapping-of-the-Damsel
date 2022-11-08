@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaySound_action : Action
+public class PlaySound : Action
 {
     [SerializeField] AudioClip audioclip;
     [SerializeField] float volume;
@@ -33,6 +33,6 @@ public class PlaySound_action : Action
             StartCoroutine(WaitToSignal(audioclipLength));
         }
         else
-            SignalActionSequencer();
+            SignalSequencer();
     }
 }

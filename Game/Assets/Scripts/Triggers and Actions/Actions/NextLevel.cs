@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class NextLevel_action : Action
+public class NextLevel : Action
 {
     [SerializeField] string levelName;
     [SerializeField] float loadDelay;

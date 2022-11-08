@@ -18,18 +18,18 @@ public class Action : MonoBehaviour
             GetComponent<Trigger>().enabled = false;
     }
     
-    protected void SignalActionSequencer()
+    protected void SignalSequencer()
     {
         ActionSequencer actionSequencer = GetComponent<ActionSequencer>();
 
         if(actionSequencer != null)
             actionSequencer.EnableNextAction();
     }
-    
+    //Maybe I should combine WaitToSignal() and SignalSequencer().
     protected IEnumerator WaitToSignal(WaitForSeconds secondsToWait)
     {
         yield return secondsToWait;
 
-        SignalActionSequencer();
+        SignalSequencer();
     }
 }

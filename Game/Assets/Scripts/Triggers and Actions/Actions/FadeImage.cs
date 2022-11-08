@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FadeImage_action : Action
+public class FadeImage : Action
 {
     [SerializeField] Image fadeImage;
     [SerializeField] bool fadeImageIn, fadeImageOut;
@@ -12,21 +12,14 @@ public class FadeImage_action : Action
     {
         DisableTrigger();
         
-        /*
-        if(fadeImageIn)
-            StartCoroutine(FadeImageIn());
-        else if(fadeImageOut)
-            StartCoroutine(FadeImageOut());
-        */
         if(CheckInput())
-            StartCoroutine(FadeImage());
+            StartCoroutine(Fade());
 
         if(!waitUntilEnd)
-            SignalActionSequencer();
+            SignalSequencer();
     }
 
-    // + Trying to use a single coroutine for fading in or out.
-    IEnumerator FadeImage()
+    IEnumerator Fade()
     {
         fadeImage.enabled = true;
         Color c = fadeImage.color; // The color alpha (a) can't be changed directly, so the color must be stored in the 'c' variable.
@@ -36,7 +29,7 @@ public class FadeImage_action : Action
 
         float stepToFade = 1.0f/secondsToFade; //Converting seconds to steps towards 100% opaque or transparent.
 
-        //Transition from transparent to fully opaque;
+        //From transparent to opaque;
         if(fadeImageIn)
         {
             while(c.a <= 1.0f)
@@ -46,7 +39,7 @@ public class FadeImage_action : Action
                 yield return null;
             }
         }
-            
+        //From opaque to transparent;
         else if(fadeImageOut)
         {
             while(c.a >= 0)
@@ -59,49 +52,8 @@ public class FadeImage_action : Action
         }
 
         if(waitUntilEnd)
-            SignalActionSequencer();
+            SignalSequencer();
     }
-
-    IEnumerator FadeImageIn()
-    {
-        fadeImage.enabled = true;
-        Color c = fadeImage.color; 
-        c.a = 0.0f;
-        fadeImage.color = c;
-
-        float stepToFade = 1.0f/secondsToFade; 
-
-        while(c.a <= 1.0f)
-        {
-            c.a += stepToFade * Time.deltaTime;
-            fadeImage.color = c;
-            yield return null;
-        }
-
-        if(waitUntilEnd)
-            SignalActionSequencer();
-    }
-    IEnumerator FadeImageOut()
-    {
-        fadeImage.enabled = true;
-        Color c = fadeImage.color;
-        c.a = 1.0f;
-        fadeImage.color = c;
-
-        float stepToFade = 1.0f/secondsToFade;
-
-        while(c.a >= 0)
-        {
-            c.a -= stepToFade * Time.deltaTime;
-            fadeImage.color = c;
-            yield return null;
-        }
-        fadeImage.enabled = false;
-
-        if(waitUntilEnd)
-            SignalActionSequencer();
-    }
-
     //This is just to log better error messages.
     bool CheckInput()
     {
