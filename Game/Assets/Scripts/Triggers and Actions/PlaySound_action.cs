@@ -26,23 +26,13 @@ public class PlaySound_action : Action
             
         else if(playContinuously && !audioSource.isPlaying)
             audioSource.Play();
-        
+
         if (waitUntilEnd)
-            timeToEnd = audioclip.length;
+        {
+            WaitForSeconds audioclipLength = new WaitForSeconds(audioclip.length);
+            StartCoroutine(WaitToSignal(audioclipLength));
+        }
         else
-            timeToEnd = 0;
-    }
-    
-    void Update()
-    {
-        if(timeToEnd <= 0.0f && canSignal)
-        {
             SignalActionSequencer();
-            canSignal = false;
-        }
-        else if(timeToEnd > 0.0f)
-        {
-            timeToEnd -= Time.deltaTime;
-        }
     }
 }

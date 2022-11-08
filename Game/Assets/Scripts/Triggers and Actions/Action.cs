@@ -9,7 +9,6 @@ public class Action : MonoBehaviour
     // + Allow repeating an action.
     [SerializeField] bool disableTrigger;
     [SerializeField] protected bool waitUntilEnd;
-    protected float secondsToWait;
     protected bool canSignal = true;
     
     //DisableTrigger must be called by every action because they can't call the base Start().
@@ -26,11 +25,10 @@ public class Action : MonoBehaviour
         if(actionSequencer != null)
             actionSequencer.EnableNextAction();
     }
-    //Currently using Update checks instead of WaitUntilEnd coroutine.
-    //Using this coroutine plus overriding feels a little confusing.
-    protected virtual IEnumerator WaitUntilEnd()
+    
+    protected IEnumerator WaitToSignal(WaitForSeconds secondsToWait)
     {
-        yield return new WaitForSeconds(secondsToWait);
+        yield return secondsToWait;
 
         SignalActionSequencer();
     }

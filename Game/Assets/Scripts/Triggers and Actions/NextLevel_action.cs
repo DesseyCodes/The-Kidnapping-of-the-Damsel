@@ -7,10 +7,19 @@ using UnityEngine.UI;
 public class NextLevel_action : Action
 {
     [SerializeField] string levelName;
+    [SerializeField] float loadDelay;
+    WaitForSeconds timer;
     
     void Start()
     {
         DisableTrigger();
-        SceneManager.LoadScene(levelName, LoadSceneMode.Single);        
+        timer = new WaitForSeconds(loadDelay);
+        StartCoroutine(LoadLevel());
+    }
+
+    IEnumerator LoadLevel()
+    {
+        yield return timer;
+        SceneManager.LoadScene(levelName, LoadSceneMode.Single);
     }
 }
