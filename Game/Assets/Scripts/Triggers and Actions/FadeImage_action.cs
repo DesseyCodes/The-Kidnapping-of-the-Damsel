@@ -17,7 +17,8 @@ public class FadeImage_action : Action
         else if(fadeImageOut)
             StartCoroutine(FadeImageOut());
 
-        SignalActionSequencer();
+        if(!waitUntilEnd)
+            SignalActionSequencer();
     }
 
     // + Trying to use a single coroutine for fading in or out.
@@ -38,18 +39,22 @@ public class FadeImage_action : Action
     IEnumerator FadeImageIn()
     {
         fadeImage.enabled = true;
-        Color c = fadeImage.color;
+        Color c = fadeImage.color; // The color alpha (a) can't be changed directly, so the color must be stored in the 'c' variable.
         c.a = 0.0f;
         fadeImage.color = c;
 
-        float stepToFade = 1.0f/secondsToFade;
+        float stepToFade = 1.0f/secondsToFade; //Converting seconds to steps towards 100% opaque.
 
+        //Transition from transparent to fully opaque;
         while(c.a <= 1.0f)
         {
             c.a += stepToFade * Time.deltaTime;
             fadeImage.color = c;
             yield return null;
         }
+
+        if(waitUntilEnd)
+            SignalActionSequencer();
     }
     IEnumerator FadeImageOut()
     {
@@ -67,5 +72,27 @@ public class FadeImage_action : Action
             yield return null;
         }
         fadeImage.enabled = false;
+
+        if(waitUntilEnd)
+            SignalActionSequencer();
+    }
+    
+    //This is just to log better error messages.
+    bool CheckInput()
+    {
+        bool check = true;
+        
+        if(fadeImage == null)
+        {
+            Debug.Log(gameObject.name + ": No image set to 'fade image'.");
+            check = false;
+        } 
+        if(secondsToFade < 0)
+        {
+            Debug.Log(gameObject.name + ": 'Seconds to fade' must be 0 or greater.");
+            check = false;
+        }
+
+        return check;
     }
 }

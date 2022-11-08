@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ActionSequencer : MonoBehaviour
 {
-    //Stores a sequence of actions
-    //Enables the next action when the previous one ends.
+    //Stores a sequence of actions.
+    //Enables the next action when signaled by the current action.
     //Currently, it can trigger only once.
 
     [SerializeField] Action[] actions;

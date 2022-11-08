@@ -10,6 +10,7 @@ public class PlaySound_action : Action
     [SerializeField] Transform point;
 
     AudioSource audioSource;
+    float timeToEnd;
 
     void Start()
     {
@@ -25,7 +26,31 @@ public class PlaySound_action : Action
             
         else if(playContinuously && !audioSource.isPlaying)
             audioSource.Play();
+        
 
-        SignalActionSequencer();
+        if (waitUntilEnd)
+            timeToEnd = secondsToWait;
+        else
+            timeToEnd = 0;
+    }
+    
+    void Update()
+    {
+        if(timeToEnd <= 0 && canSignal)
+        {
+            SignalActionSequencer();
+            canSignal = false;
+        }
+        else if(timeToEnd > 0)
+        {
+            timeToEnd -= Time.deltaTime;
+        }
+    }
+    //Using Update checks instead of WaitUntilEnd
+    protected override IEnumerator WaitUntilEnd()
+    {
+        secondsToWait = audioclip.length;
+        yield return null;
+        StartCoroutine(base.WaitUntilEnd());
     }
 }

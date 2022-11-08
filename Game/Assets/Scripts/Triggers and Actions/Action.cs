@@ -6,10 +6,11 @@ using UnityEngine;
 
 public class Action : MonoBehaviour
 {
-    // + Allow destroying on action end.
     // + Allow repeating an action.
     [SerializeField] bool disableTrigger;
-    //[SerializeField] bool destroyOnEnd;
+    [SerializeField] protected bool waitUntilEnd;
+    protected float secondsToWait;
+    protected bool canSignal;
     
     //DisableTrigger must be called by every action because they can't call the base Start().
     protected void DisableTrigger()
@@ -25,12 +26,12 @@ public class Action : MonoBehaviour
         if(actionSequencer != null)
             actionSequencer.EnableNextAction();
     }
-
-    /*//Some actions may need a different DestroyOnEnd().
-    protected virtual void DestroyOnEnd()
+    //Currently Update checks instead of WaitUntilEnd coroutine
+    protected virtual IEnumerator WaitUntilEnd()
     {
-        if(destroyOnEnd)
-            Destroy(this);
+        Debug.Log(gameObject.name + ": base WaitUnitlEnd() was called. secondsToWait is " + secondsToWait);
+        yield return new WaitForSeconds(secondsToWait);
+
+        SignalActionSequencer();
     }
-    */
 }
