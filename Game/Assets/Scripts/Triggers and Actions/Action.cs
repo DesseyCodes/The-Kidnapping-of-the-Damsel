@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class Action : MonoBehaviour
 {
-    // + Allow repeating an action.
     [SerializeField] bool disableTrigger;
     [SerializeField] protected bool waitUntilEnd;
     [SerializeField] protected bool allowRepeat;

@@ -8,7 +8,7 @@ public class FadeImage : Action
     [SerializeField] Image fadeImage;
     [SerializeField] bool fadeImageIn, fadeImageOut;
     [SerializeField] float secondsToFade;
-    
+
     void Start()
     {
         DisableTrigger();
@@ -55,7 +55,7 @@ public class FadeImage : Action
         if(waitUntilEnd)
             SignalSequencer();
     }
-    //This is just to log better error messages.
+    
     bool CheckInput()
     {
         bool check = true;
