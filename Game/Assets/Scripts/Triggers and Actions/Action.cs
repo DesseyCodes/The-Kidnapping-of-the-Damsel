@@ -9,6 +9,7 @@ public class Action : MonoBehaviour
     // + Allow repeating an action.
     [SerializeField] bool disableTrigger;
     [SerializeField] protected bool waitUntilEnd;
+    [SerializeField] protected bool allowRepeat;
     protected bool canSignal = true;
     
     //DisableTrigger must be called by every action because they can't call the base Start().
@@ -31,5 +32,10 @@ public class Action : MonoBehaviour
         yield return secondsToWait;
 
         SignalSequencer();
+    }
+    protected void AllowRepeat()
+    {
+        if(allowRepeat)
+            enabled = false;
     }
 }

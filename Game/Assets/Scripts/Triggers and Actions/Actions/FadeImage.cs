@@ -8,6 +8,7 @@ public class FadeImage : Action
     [SerializeField] Image fadeImage;
     [SerializeField] bool fadeImageIn, fadeImageOut;
     [SerializeField] float secondsToFade;
+    
     void Start()
     {
         DisableTrigger();

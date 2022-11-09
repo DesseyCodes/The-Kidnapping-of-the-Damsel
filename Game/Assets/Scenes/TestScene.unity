@@ -305,6 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTrigger: 0
   waitUntilEnd: 0
+  allowRepeat: 0
   fadeImage: {fileID: 533530812}
   fadeImageIn: 1
   fadeImageOut: 0
@@ -323,6 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTrigger: 0
   waitUntilEnd: 0
+  allowRepeat: 0
   audioclip: {fileID: 8300000, guid: 1bd973013a5a87948af5c6f451e55504, type: 3}
   volume: 0.25
   playContinuously: 0
@@ -1280,8 +1282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e58a5a43a8d06594492a1937153e9a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableTrigger: 1
+  disableTrigger: 0
   waitUntilEnd: 0
+  allowRepeat: 1
   audioclip: {fileID: 8300000, guid: 1bd973013a5a87948af5c6f451e55504, type: 3}
   volume: 0.25
   playContinuously: 0
@@ -1775,6 +1778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTrigger: 0
   waitUntilEnd: 1
+  allowRepeat: 0
   audioclip: {fileID: 8300000, guid: 1bd973013a5a87948af5c6f451e55504, type: 3}
   volume: 0.25
   playContinuously: 0
@@ -1795,6 +1799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTrigger: 0
   waitUntilEnd: 1
+  allowRepeat: 0
   fadeImage: {fileID: 533530812}
   fadeImageIn: 0
   fadeImageOut: 1
@@ -2219,6 +2224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTrigger: 0
   waitUntilEnd: 0
+  allowRepeat: 0
   levelName: PlayerTesting
   loadDelay: 2
 --- !u!114 &1221869800
@@ -2235,6 +2241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTrigger: 0
   waitUntilEnd: 1
+  allowRepeat: 0
   fadeImage: {fileID: 1489044002}
   fadeImageIn: 1
   fadeImageOut: 0
@@ -2289,6 +2296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTrigger: 1
   waitUntilEnd: 0
+  allowRepeat: 0
   audioclip: {fileID: 8300000, guid: 1bd973013a5a87948af5c6f451e55504, type: 3}
   volume: 1
   playContinuously: 0
@@ -2792,6 +2800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableTrigger: 0
   waitUntilEnd: 0
+  allowRepeat: 0
   fadeImage: {fileID: 2087358074}
   fadeImageIn: 0
   fadeImageOut: 1

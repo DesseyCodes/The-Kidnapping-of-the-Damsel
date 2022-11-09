@@ -12,7 +12,7 @@ public class PlaySound : Action
     AudioSource audioSource;
     float timeToEnd;
 
-    void Start()
+    void OnEnable()
     {
         DisableTrigger();
 
@@ -34,5 +34,7 @@ public class PlaySound : Action
         }
         else
             SignalSequencer();
+
+        AllowRepeat();
     }
 }
