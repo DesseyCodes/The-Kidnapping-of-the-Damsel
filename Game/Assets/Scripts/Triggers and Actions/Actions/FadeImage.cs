@@ -23,14 +23,14 @@ public class FadeImage : Action
     IEnumerator Fade()
     {
         fadeImage.enabled = true;
-        Color c = fadeImage.color; // The color alpha (a) can't be changed directly, so the color must be stored in the 'c' variable.
+        Color c = fadeImage.color; // color can't be changed directly, so it must be stored in a temporary variable.
         if (fadeImageIn) c.a = 0.0f;
         else if(fadeImageOut) c.a = 1.0f;
         fadeImage.color = c;
 
-        float stepToFade = 1.0f/secondsToFade; //Converting seconds to steps towards 100% opaque or transparent.
+        float stepToFade = 1.0f/secondsToFade; // Converting seconds to steps towards 100% opaque or transparent.
 
-        //From transparent to opaque;
+        // From transparent to opaque;
         if(fadeImageIn)
         {
             while(c.a <= 1.0f)
@@ -40,7 +40,7 @@ public class FadeImage : Action
                 yield return null;
             }
         }
-        //From opaque to transparent;
+        // From opaque to transparent;
         else if(fadeImageOut)
         {
             while(c.a >= 0)

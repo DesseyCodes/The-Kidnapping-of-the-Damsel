@@ -9,14 +9,13 @@ public class PlaySound : Action
     [SerializeField] bool playContinuously, playOneShot, playAtPoint;
     [SerializeField] Transform point;
 
-    AudioSource audioSource;
     float timeToEnd;
 
     void OnEnable()
     {
         DisableTrigger();
 
-        audioSource = GetComponent<AudioSource>();
+        AudioSource audioSource = GetComponent<AudioSource>();
 
         if(playAtPoint) 
             AudioSource.PlayClipAtPoint(audioclip, point.position, volume);
