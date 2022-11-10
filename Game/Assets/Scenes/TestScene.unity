@@ -192,11 +192,9 @@ MonoBehaviour:
   disableTrigger: 0
   waitUntilEnd: 0
   allowRepeat: 0
-  dialoguePanel: {fileID: 1984387811}
-  dialogueText: {fileID: 1986971840}
   messages:
-  - 'And quoth the raven:'
-  - Nevermore
+  - caw, caw!
+  - caw
   typingInterval: 0.05
   continueButton: Jump
 --- !u!212 &207685628
@@ -3012,7 +3010,7 @@ GameObject:
   - component: {fileID: 1984387812}
   - component: {fileID: 1984387811}
   m_Layer: 5
-  m_Name: Dialogue panel
+  m_Name: dialogue panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3089,7 +3087,7 @@ GameObject:
   - component: {fileID: 1986971841}
   - component: {fileID: 1986971840}
   m_Layer: 5
-  m_Name: Dialogue Text
+  m_Name: dialogue text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
