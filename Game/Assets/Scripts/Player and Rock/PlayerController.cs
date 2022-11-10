@@ -19,6 +19,11 @@ public class PlayerController : MonoBehaviour
 
     public bool game;
 
+   public Vector2 screenPos;
+    public Vector2 worldPos;
+    public Vector2 mousePos;
+
+    //public Camera cam;
 
     Vector2 pMovement; // We'll set this variable in the update method
     // Start is called before the first frame update
@@ -26,7 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         playerSR = GetComponent<SpriteRenderer>();
-        hasRock = true;
+        //hasRock = true;
         game = true;
     }
 
@@ -37,16 +42,24 @@ public class PlayerController : MonoBehaviour
         pMovement.x = Input.GetAxisRaw("Horizontal");
         pMovement.y = Input.GetAxisRaw("Vertical");
 
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Throw(); // Throw method created down below
+           // hasRock = false;
+        }
+
+        //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
     }
 
-    private void FixedUpdate()
+     void FixedUpdate()
     {
+
+        screenPos = Input.mousePosition;
+        worldPos = Camera.main.ScreenToWorldPoint(screenPos);
+
         playerRB.MovePosition(playerRB.position + pMovement * pSpeed * Time.fixedDeltaTime); // The lovely Time.fixedDeltaTime prevents those of use with super fast computers from going crazy fast
-        if (Input.GetMouseButtonDown(0) && hasRock == true)
-        {
-            Throw(); // Throw method created down below
-        }
 
         if (Input.GetAxisRaw("Horizontal") == -1)
         {
@@ -77,8 +90,7 @@ public class PlayerController : MonoBehaviour
         // Instantiate the rockProjectile object at the player's position and the player's rotation
         GameObject rock = Instantiate(rockProjectile, launchOffset.position, launchOffset.rotation);
         Rigidbody2D rockRB = rock.GetComponent<Rigidbody2D>();
-        rockRB.AddForce(new Vector2 (transform.position.x +1, transform.position.y +1) * rockSpeed, ForceMode2D.Impulse); // Apply an impulse force in the direction that would be up
-        hasRock = false; // Set hasRock to false
+        rockRB.AddForce(new Vector2 (worldPos.x - launchOffset.position.x +1, worldPos.y - launchOffset.position.y +1) * rockSpeed, ForceMode2D.Impulse); // Apply an impulse force in the direction that would be up
     }
         
 }
