@@ -10,6 +10,7 @@ public class Dialogue : Action
     // Types each message.
     // Waits for player input at the end of each message.
     
+    [TextArea(3, 10)]
     [SerializeField] string[] messages;
     [Tooltip ("Interval between each letter.")]
     [SerializeField] float typingInterval;
@@ -26,9 +27,7 @@ public class Dialogue : Action
     void OnEnable()
     {
         // Calling a dialogue panel's SetActive(true) causes a hiccup. So I'm changing the alpha instead.
-        Color c = dialoguePanel.color;
-        c.a = 0.42f;
-        dialoguePanel.color = c;
+        SetPanelAlpha(0.42f);
         dialogueText.text = "";
 
         StartCoroutine(ContinueDialogue());
@@ -75,13 +74,18 @@ public class Dialogue : Action
 
             if(Input.GetButtonDown(continueButton))
             {
-                Color c = dialoguePanel.color;
-                c.a = 0;
-                dialoguePanel.color = c;
+                SetPanelAlpha(0);
                 dialogueText.text = "";
 
                 canEnd = true;
             }
         }
+        SignalSequencer();
+    }
+    SetPanelAlpha(float alpha)
+    {
+        Color c = dialoguePanel.color;
+        c.a = alpha;
+        dialoguePanel.color = c;
     }
 }

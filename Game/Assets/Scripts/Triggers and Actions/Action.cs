@@ -29,7 +29,7 @@ public class Action : MonoBehaviour
     {
         ActionSequencer actionSequencer = GetComponent<ActionSequencer>();
 
-        if(actionSequencer != null)
+        if(actionSequencer != null && actionSequencer.enabled)
             actionSequencer.EnableNextAction();
     }
 
