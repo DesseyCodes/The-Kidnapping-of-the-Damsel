@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EntersArea : Trigger
-{
+{  
+    // EntersArea needs a trigger collider to work.
+    
     [SerializeField] string gameObjectTag;
     
     void Start()

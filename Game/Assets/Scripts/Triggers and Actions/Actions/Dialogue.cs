@@ -82,7 +82,7 @@ public class Dialogue : Action
         }
         SignalSequencer();
     }
-    SetPanelAlpha(float alpha)
+    void SetPanelAlpha(float alpha)
     {
         Color c = dialoguePanel.color;
         c.a = alpha;
