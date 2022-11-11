@@ -7,18 +7,19 @@ public class NextLevel : Action
 {
     [SerializeField] string levelName;
     [SerializeField] float loadDelay;
-    WaitForSeconds timer;
+    float timer;
     
     void Start()
     {
         DisableTrigger();
-        timer = new WaitForSeconds(loadDelay);
-        StartCoroutine(LoadLevel());
+        timer = loadDelay;
     }
 
-    IEnumerator LoadLevel()
+    void Update()
     {
-        yield return timer;
-        SceneManager.LoadScene(levelName, LoadSceneMode.Single);
-    }
+        if(timer < 0)
+            SceneManager.LoadScene(levelName, LoadSceneMode.Single);
+        else
+            timer -= Time.deltaTime;
+    }   
 }
