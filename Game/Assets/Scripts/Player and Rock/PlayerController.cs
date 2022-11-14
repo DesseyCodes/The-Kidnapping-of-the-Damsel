@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRB;
     private SpriteRenderer playerSR;
 
+    private Animator animator;
+
     public Transform launchOffset;
 
     public Sprite[] spriteDir;
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         playerSR = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         //hasRock = true;
         game = true;
     }
@@ -42,6 +45,8 @@ public class PlayerController : MonoBehaviour
         pMovement.x = Input.GetAxisRaw("Horizontal");
         pMovement.y = Input.GetAxisRaw("Vertical");
 
+        animator.SetInteger("horizontal walk", (int) pMovement.x);
+        animator.SetInteger("vertical walk", (int) pMovement.y);
         
         if (Input.GetMouseButtonDown(0))
         {

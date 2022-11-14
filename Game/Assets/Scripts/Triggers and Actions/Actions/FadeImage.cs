@@ -9,7 +9,7 @@ public class FadeImage : Action
     [SerializeField] bool fadeImageIn, fadeImageOut;
     [SerializeField] float secondsToFade;
 
-    void Start()
+    void OnEnable()
     {
         DisableTrigger();
         
@@ -23,7 +23,7 @@ public class FadeImage : Action
     IEnumerator Fade()
     {
         fadeImage.enabled = true;
-        Color c = fadeImage.color; // color can't be changed directly, so it must be stored in a temporary variable.
+        Color c = fadeImage.color; // color.a can't be changed directly, so it must be stored in a temporary variable.
         if (fadeImageIn) c.a = 0.0f;
         else if(fadeImageOut) c.a = 1.0f;
         fadeImage.color = c;
@@ -52,7 +52,7 @@ public class FadeImage : Action
             fadeImage.enabled = false;            
         }
 
-        if(waitUntilEnd)
+        if(waitUntilEnd) 
             SignalSequencer();
     }
     

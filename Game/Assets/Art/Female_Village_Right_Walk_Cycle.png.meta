@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 89b3dd5924a0e4e45873f3ddce0de308
+guid: 492028661b7ce8347bfbc1ba2225a592
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,8 +69,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,7 +117,7 @@ TextureImporter:
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -129,12 +129,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Female_Village_Four_View_Sprite_Sheet_0
+      name: Female_Village_Walk_Right_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 8
         y: 0
-        width: 22
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f35abf972ddec514881e1d9c637c1ac7
-      internalID: -471835625
+      spriteID: f0e38b7335ccf9c48bcf50322444c258
+      internalID: -2095222262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female_Village_Four_View_Sprite_Sheet_1
+      name: Female_Village_Walk_Right_1
       rect:
         serializedVersion: 2
         x: 40
@@ -164,19 +164,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cc20460abefe164fa1e7695a43a184d
-      internalID: -920794171
+      spriteID: 127eb03eedd29c146a9c13807824a532
+      internalID: 75960250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female_Village_Four_View_Sprite_Sheet_2
+      name: Female_Village_Walk_Right_2
       rect:
         serializedVersion: 2
-        x: 69
+        x: 72
         y: 0
-        width: 22
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -185,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a4d62894d620e34382c16c10280a00f
-      internalID: 882245312
+      spriteID: 18e04eb2a36d1424b8130029bcfbfdd9
+      internalID: -384198133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female_Village_Four_View_Sprite_Sheet_3
+      name: Female_Village_Walk_Right_3
       rect:
         serializedVersion: 2
         x: 104
@@ -206,8 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ea94e8470398bf4b8d6d5f23c1ef48b
-      internalID: -1705121493
+      spriteID: 236eca9d2e6d45842bc6e96286f60814
+      internalID: 1806614234
       vertices: []
       indices: 
       edges: []
@@ -223,10 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Female_Village_Four_View_Sprite_Sheet_2: 882245312
-      Female_Village_Four_View_Sprite_Sheet_0: -471835625
-      Female_Village_Four_View_Sprite_Sheet_1: -920794171
-      Female_Village_Four_View_Sprite_Sheet_3: -1705121493
+      Female_Village_Walk_Right_1: 75960250
+      Female_Village_Walk_Right_3: 1806614234
+      Female_Village_Walk_Right_0: -2095222262
+      Female_Village_Walk_Right_2: -384198133
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

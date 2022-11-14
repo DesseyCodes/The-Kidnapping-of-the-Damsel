@@ -6,10 +6,6 @@ using UnityEngine.UI;
 
 public class Dialogue : Action
 {
-    // Contains messages.
-    // Types each message.
-    // Waits for player input at the end of each message.
-    
     [TextArea(3, 10)]
     [SerializeField] string[] messages;
     [Tooltip ("Interval between each letter.")]
@@ -76,12 +72,13 @@ public class Dialogue : Action
             {
                 SetPanelAlpha(0);
                 dialogueText.text = "";
-
                 canEnd = true;
             }
         }
+
         SignalSequencer();
     }
+    
     void SetPanelAlpha(float alpha)
     {
         Color c = dialoguePanel.color;

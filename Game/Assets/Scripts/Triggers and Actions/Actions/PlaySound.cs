@@ -9,8 +9,6 @@ public class PlaySound : Action
     [SerializeField] bool playContinuously, playOneShot, playAtPoint;
     [SerializeField] Transform point;
 
-    float timeToEnd;
-
     void OnEnable()
     {
         DisableTrigger();
@@ -27,13 +25,15 @@ public class PlaySound : Action
             audioSource.Play();
 
         if (waitUntilEnd)
-        {
-            WaitForSeconds audioclipLength = new WaitForSeconds(audioclip.length);
-            StartCoroutine(WaitToSignal(audioclipLength));
-        }
+            StartCoroutine(WaitToSignal(audioclip.length));
         else
             SignalSequencer();
-
-        AllowRepeat();
     }
+
+    IEnumerator WaitToSignal(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SignalSequencer();
+    }
+    
 }

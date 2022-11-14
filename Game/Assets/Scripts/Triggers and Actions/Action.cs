@@ -8,34 +8,20 @@ public class Action : MonoBehaviour
 {
     [SerializeField] bool disableTrigger;
     [SerializeField] protected bool waitUntilEnd;
-    [SerializeField] protected bool allowRepeat;
-    protected bool canSignal = true;
     
-    //DisableTrigger must be called by every action because they can't call the base Start().
+    //Included DisableTrigger because the base Start() can't be called.
     protected void DisableTrigger()
     {
         if(disableTrigger)
             GetComponent<Trigger>().enabled = false;
     }
-    
-    protected IEnumerator WaitToSignal(WaitForSeconds secondsToWait)
-    {
-        yield return secondsToWait;
-
-        SignalSequencer();
-    }
 
     protected void SignalSequencer()
     {
-        ActionSequencer actionSequencer = GetComponent<ActionSequencer>();
-
-        if(actionSequencer != null && actionSequencer.enabled)
-            actionSequencer.EnableNextAction();
+        Trigger trigger = GetComponent<Trigger>();
+        
+        if(trigger != null)
+            trigger.ContinueSequence();
     }
 
-    protected void AllowRepeat()
-    {
-        if(allowRepeat)
-            enabled = false;
-    }
 }

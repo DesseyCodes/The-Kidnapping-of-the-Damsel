@@ -6,19 +6,36 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-    [Tooltip ("If there is an action here, the action sequencer will be ignored.")]
-    [SerializeField] Action action;
-    [SerializeField] ActionSequencer actionSequencer;
+    [SerializeField] Action[] actions;
+    [SerializeField] bool repeat;
+    int actionIndex;
+    protected bool canStart = true;
 
     protected void EnableAction()
     {
-        if (action == null && actionSequencer == null)
+        if (actions[0] == null || actions.Length == 0)
             Debug.Log(gameObject.name + ": No actions set to this trigger");
-
-        else if(action != null)
-            action.enabled = true;
             
+        else if(canStart)
+        {
+            actionIndex = 0;
+            actions[0].enabled = true;
+        }
+    }
+    public void ContinueSequence()
+    {
+        if(repeat)
+            actions[actionIndex].enabled = false;
+
+        if(actionIndex + 1 < actions.Length)
+        {
+            actionIndex++;
+            actions[actionIndex].enabled = true;
+            canStart = false;
+        }
+        else if (!repeat)
+            enabled = false;
         else
-            actionSequencer.enabled = true;
+            canStart = true;
     }
 }
