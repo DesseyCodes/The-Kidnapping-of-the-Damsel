@@ -5,7 +5,7 @@ using UnityEngine;
 // Add: Highlight the next location the bird will go.
 public class Bird : MonoBehaviour
 {
-    [Tooltip ("A game object containing empty game objects as waypoints. The starting waypoint will be the first")]
+    [Tooltip ("A game object containing empty game objects as waypoints. The starting waypoint will be the first.")]
     [SerializeField] Transform waypoints;
     [SerializeField] float speed, waitTime;
     [Tooltip ("A game object with a sprite renderer.")]
@@ -47,7 +47,7 @@ public class Bird : MonoBehaviour
 
             case (true, true, false):
                 // Fix: sometimes the bird moves back and forth for a while.
-                // Including more waypoints decreases the chance of selecting a previous one.
+                // Including more waypoints decreases the chance of selecting a previous one. Doesn't seem very noticeable with 6 waypoints.
                 // Storing the previous position could avoid it.
                 Vector2 currentPosition = nextPosition;
                 while(currentPosition == nextPosition)

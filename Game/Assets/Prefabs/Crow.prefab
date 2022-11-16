@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4707915552659060193}
   - component: {fileID: 5488987223513155228}
   - component: {fileID: 5274767764934525512}
+  - component: {fileID: 2337418104286070365}
+  - component: {fileID: 3590165027501367348}
   m_Layer: 0
   m_Name: Crow
   m_TagString: Untagged
@@ -123,3 +125,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2337418104286070365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580480173414085361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8282654a7bc271242b221c1aeb1bc8fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 2
+--- !u!70 &3590165027501367348
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580480173414085361}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0540479, y: 0.9728384}
+  m_Size: {x: 9.55725, y: 11.394831}
+  m_Direction: 0

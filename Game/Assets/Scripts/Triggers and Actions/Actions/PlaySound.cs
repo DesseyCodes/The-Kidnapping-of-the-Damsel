@@ -5,14 +5,15 @@ using UnityEngine;
 public class PlaySound : Action
 {
     [SerializeField] AudioClip audioclip;
+    [Tooltip ("Volume scale.")]
     [SerializeField] float volume;
+    [Tooltip ("Play continuously needs an audiosource with an audioclip.\nPlay oneshot needs an audiosource and the audioclip up here.\nPlay at point only needs the audioclip.")]
     [SerializeField] bool playContinuously, playOneShot, playAtPoint;
+    [Tooltip ("Point for 'play at point'")]
     [SerializeField] Transform point;
 
     void OnEnable()
     {
-        DisableTrigger();
-
         AudioSource audioSource = GetComponent<AudioSource>();
 
         if(playAtPoint) 
@@ -27,13 +28,13 @@ public class PlaySound : Action
         if (waitUntilEnd)
             StartCoroutine(WaitToSignal(audioclip.length));
         else
-            SignalSequencer();
+            SignalToContinue();
     }
 
     IEnumerator WaitToSignal(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        SignalSequencer();
+        SignalToContinue();
     }
     
 }

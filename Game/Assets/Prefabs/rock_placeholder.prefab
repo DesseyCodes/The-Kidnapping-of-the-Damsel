@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4152665003659853541}
   - component: {fileID: 497376318880568920}
   - component: {fileID: 1475370880181323618}
+  - component: {fileID: 8424812609860877040}
   m_Layer: 0
   m_Name: rock_placeholder
   m_TagString: Untagged
@@ -123,3 +124,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.16
+--- !u!114 &8424812609860877040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4152665003659853540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6959c2806fd5a6c408795d523906a519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1

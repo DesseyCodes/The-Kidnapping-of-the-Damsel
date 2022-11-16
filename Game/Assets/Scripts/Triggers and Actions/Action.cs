@@ -2,21 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Action.cs and Trigger.cs can't be used by themselves.
+// Action.cs can't be used by itself. 
+// It just provides base functionality for actions.
 
 public class Action : MonoBehaviour
 {
-    [SerializeField] bool disableTrigger;
+    [Tooltip ("Waits until this action ends to start the next one.")]
     [SerializeField] protected bool waitUntilEnd;
-    
-    //Included DisableTrigger because the base Start() can't be called.
-    protected void DisableTrigger()
-    {
-        if(disableTrigger)
-            GetComponent<Trigger>().enabled = false;
-    }
 
-    protected void SignalSequencer()
+    protected void SignalToContinue()
     {
         Trigger trigger = GetComponent<Trigger>();
         

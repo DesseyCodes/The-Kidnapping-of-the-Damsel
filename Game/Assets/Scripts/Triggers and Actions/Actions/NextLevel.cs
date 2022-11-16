@@ -11,7 +11,6 @@ public class NextLevel : Action
     
     void Start()
     {
-        DisableTrigger();
         timer = loadDelay;
     }
 

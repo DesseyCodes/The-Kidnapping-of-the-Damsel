@@ -76,7 +76,7 @@ public class Dialogue : Action
             }
         }
 
-        SignalSequencer();
+        SignalToContinue();
     }
     
     void SetPanelAlpha(float alpha)
