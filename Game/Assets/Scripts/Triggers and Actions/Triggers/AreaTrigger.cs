@@ -11,7 +11,7 @@ public class AreaTrigger : Trigger
 {  
     [Tooltip ("Select one.")]
     [SerializeField] bool enterArea, exitArea, stayInArea;
-    [Tooltip ("Tagged game object that will interact with this trigger.")]
+    [Tooltip ("Tag of the game object that will interact with this trigger.")]
     [SerializeField] string gameObjectTag;
     [Tooltip ("Button to be pressed while the game object stays in the trigger collider.")]
     [SerializeField] string button;
