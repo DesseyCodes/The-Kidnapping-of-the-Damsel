@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelOne.unity
     guid: 3c40ec271ba30c34a9bbcde150d0ef69
+  - enabled: 1
+    path: Assets/Scenes/Village.unity
+    guid: d220591e2bc525d49bbef4b871b69c1c
+  - enabled: 1
+    path: Assets/Scenes/Inside House.unity
+    guid: 522761562fba1b34997424d844fadf6c
   m_configObjects: {}

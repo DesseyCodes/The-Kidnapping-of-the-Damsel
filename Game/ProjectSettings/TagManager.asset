@@ -41,12 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Trees
+  - name: Ground
+    uniqueID: 469830361
+    locked: 0
+  - name: Environmental
     uniqueID: 383695103
     locked: 0
   - name: Player
     uniqueID: 2783698451
     locked: 0
-  - name: Ground
-    uniqueID: 469830361
+  - name: Buildings
+    uniqueID: 474375051
     locked: 0
