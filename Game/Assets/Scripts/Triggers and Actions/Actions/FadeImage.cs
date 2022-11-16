@@ -37,7 +37,6 @@ public class FadeImage : Action
             while(c.a <= 1.0f)
             {
                 c.a += stepToFade * Time.deltaTime;
-                Debug.Log(c.a);
                 image.color = c;
                 yield return null;
             }
