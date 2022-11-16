@@ -12,9 +12,13 @@ public class Damageable : MonoBehaviour
         currentHP = hitPoints;
     }
 
-    public void Damage(int value)
+    public void ChangeHP(int value)
     {
         currentHP -= value;
+
+        if (currentHP > hitPoints)
+            currentHP = hitPoints;
+            
         if(currentHP <= 0)
             Destroy(gameObject);
     }

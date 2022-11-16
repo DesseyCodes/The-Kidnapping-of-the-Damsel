@@ -30,7 +30,7 @@ public class AreaTrigger : Trigger
     }
     void OnTriggerStay2D(Collider2D other)
     {
-        if(stayInArea && Input.GetButtonDown(button) && other.gameObject.tag == gameObjectTag)
+        if (stayInArea && Input.GetButtonDown(button) && other.gameObject.tag == gameObjectTag)
             EnableAction();
     } 
 }
