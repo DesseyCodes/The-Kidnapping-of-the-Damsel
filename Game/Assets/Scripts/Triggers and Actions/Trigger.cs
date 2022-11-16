@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
+    [Tooltip ("Every action should be disabled first so they don't run when the scene starts.")]
     [SerializeField] Action[] actions;
     [Tooltip ("Keeps the trigger active and allows all actions to happen again.")]
     [SerializeField] bool repeat;

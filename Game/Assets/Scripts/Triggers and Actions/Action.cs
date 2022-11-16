@@ -4,6 +4,7 @@ using UnityEngine;
 
 // Action.cs can't be used by itself. 
 // It just provides base functionality for actions.
+// Note that any action left enabled will run when the scene starts.
 
 public class Action : MonoBehaviour
 {
