@@ -8,6 +8,7 @@ using UnityEngine;
 public class Trigger : MonoBehaviour
 {
     [SerializeField] Action[] actions;
+    [Tooltip ("Keeps the trigger active and allows all actions to happen again.")]
     [SerializeField] bool repeat;
     int actionIndex;
     protected bool canTrigger = true;
@@ -26,7 +27,7 @@ public class Trigger : MonoBehaviour
     }
     public void ContinueSequence()
     {
-        // Actions are repeated using Unity's OnEnable method, so they are repeated by disabling and re-enabling them later.
+        // Actions start using Unity's OnEnable method, so they are repeated by disabling and re-enabling them later.
         if(repeat)
             actions[actionIndex].enabled = false;
 
