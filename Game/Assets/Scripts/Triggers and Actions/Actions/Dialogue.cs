@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+// Add: Make dialogues work with cutscenes.
 public class Dialogue : Action
 {
     [TextArea(3, 10)]
@@ -75,7 +76,6 @@ public class Dialogue : Action
                 canEnd = true;
             }
         }
-
         SignalToContinue();
     }
     

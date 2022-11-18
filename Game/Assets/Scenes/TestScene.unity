@@ -565,6 +565,11 @@ Transform:
   m_Father: {fileID: 926046742}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &290256441 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4707915552659060193, guid: faeff0a30cd42d44d97d8d0b32c5036d, type: 3}
+  m_PrefabInstance: {fileID: 1989059409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &310664261
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitUntilEnd: 1
-  image: {fileID: 533530812}
+  image: {fileID: 0}
+  spriteRenderer: {fileID: 290256441}
   fadeImageIn: 1
   fadeImageOut: 0
   secondsToFade: 2
@@ -838,7 +844,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitUntilEnd: 1
-  image: {fileID: 533530812}
+  image: {fileID: 0}
+  spriteRenderer: {fileID: 290256441}
   fadeImageIn: 0
   fadeImageOut: 1
   secondsToFade: 2
@@ -2614,6 +2621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitUntilEnd: 1
   image: {fileID: 1489044002}
+  spriteRenderer: {fileID: 0}
   fadeImageIn: 1
   fadeImageOut: 0
   secondsToFade: 2
@@ -2720,6 +2728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitUntilEnd: 0
   image: {fileID: 1489044002}
+  spriteRenderer: {fileID: 0}
   fadeImageIn: 0
   fadeImageOut: 1
   secondsToFade: 2
@@ -5288,6 +5297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitUntilEnd: 0
   image: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   fadeImageIn: 0
   fadeImageOut: 1
   secondsToFade: 3
@@ -5983,6 +5993,10 @@ PrefabInstance:
     - target: {fileID: 3869627833441905116, guid: faeff0a30cd42d44d97d8d0b32c5036d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4707915552659060193, guid: faeff0a30cd42d44d97d8d0b32c5036d, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5488987223513155228, guid: faeff0a30cd42d44d97d8d0b32c5036d, type: 3}
       propertyPath: waypoints
