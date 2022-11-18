@@ -78,10 +78,9 @@ public class Bird : MonoBehaviour
     }
     void ChoosePosition()
     {
-        // Fix: sometimes the bird moves back and forth for a while.
+        // Fix: sometimes the bird moves back and forth for a while when selecting random waypoints. 
         // Including more waypoints decreases the chance of selecting a previous one. Doesn't seem too noticeable with 6 waypoints.
         // Storing the previous position could avoid it.
-        // Add: A route for the bird to follow back and forth. Each waypoint will be chosen sequentially.
         Vector2 currentPosition = nextPosition;
         while(currentPosition == nextPosition)
         {
