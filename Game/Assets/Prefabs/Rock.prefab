@@ -137,3 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  bounces: 3
+  canBreak: 1
+  stopTime: 0.1

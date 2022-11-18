@@ -103,7 +103,7 @@ MonoBehaviour:
   waypoints: {fileID: 0}
   speed: 3
   waitTime: 1
-  nextPosHighlight: {fileID: 0}
+  nextPosHighlight: {fileID: 2714266187943924701, guid: e2ff62f53b363c045a9e373e24f1b9d5, type: 3}
 --- !u!50 &5274767764934525512
 Rigidbody2D:
   serializedVersion: 4
