@@ -23840,9 +23840,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1698836754}
+  - component: {fileID: 1698836757}
   - component: {fileID: 1698836752}
   - component: {fileID: 1698836756}
-  - component: {fileID: 1698836757}
   m_Layer: 6
   m_Name: transition
   m_TagString: Untagged
@@ -23857,7 +23857,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698836751}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81fbb819e9672094b9c67ce776f0404c, type: 3}
   m_Name: 
@@ -24044,7 +24044,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 1705800160}
   - {fileID: 1705800160}
   repeat: 1
   enterArea: 1

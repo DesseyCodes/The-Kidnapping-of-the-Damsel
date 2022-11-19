@@ -15,25 +15,37 @@ public class AreaTrigger : Trigger
     [SerializeField] string gameObjectTag;
     [Tooltip ("Input manager button to be pressed while the game object stays in the trigger collider.")]
     [SerializeField] string button;
+    bool inTrigger;
     
-    void Start(){}
+    void Awake()
+    {
+        inTrigger = false;
+    }
+
+    void Update()
+    {
+        if (button != "" && Input.GetButtonDown(button) && inTrigger)
+            EnableAction();
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (enterArea && other.gameObject.tag == gameObjectTag)
-            EnableAction();
+        if(other.gameObject.tag == gameObjectTag)
+
+            if(enterArea)
+                EnableAction();
+
+            else if(stayInArea)
+                inTrigger = true;
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        if (exitArea && other.gameObject.tag == gameObjectTag)
-            EnableAction();
+        if(other.gameObject.tag == gameObjectTag)
+
+            if(exitArea)
+                EnableAction();
+                
+            else if(stayInArea)
+                inTrigger = false;
     }
-
-    //Fix: It seems that sometimes the input isn't recognized?
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if (Input.GetButtonDown(button) && stayInArea && other.gameObject.tag == gameObjectTag)
-            EnableAction();
-    } 
 }
-
