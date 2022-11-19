@@ -23936,8 +23936,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1705800159}
   - component: {fileID: 1705800158}
-  - component: {fileID: 1705800160}
   - component: {fileID: 1705800161}
+  - component: {fileID: 1705800160}
   - component: {fileID: 1705800162}
   m_Layer: 3
   m_Name: NPC
@@ -24029,7 +24029,7 @@ MonoBehaviour:
   messages:
   - Hey! Are you excited for the festival?
   typingInterval: 0.1
-  continueButton: 
+  continueButton: Fire1
   responses: []
 --- !u!114 &1705800161
 MonoBehaviour:
@@ -24050,7 +24050,7 @@ MonoBehaviour:
   exitArea: 0
   stayInArea: 0
   gameObjectTag: Player
-  button: Jump
+  button: Fire1
 --- !u!61 &1705800162
 BoxCollider2D:
   m_ObjectHideFlags: 0
