@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 617569981}
   - component: {fileID: 617569980}
   - component: {fileID: 617569979}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4292687416537698510}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LaunchOffset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 4292687417365290635}
   - component: {fileID: 1994792512}
   - component: {fileID: 1994792513}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerPlaceholder
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ MonoBehaviour:
   - {fileID: 882245312, guid: 89b3dd5924a0e4e45873f3ddce0de308, type: 3}
   pSpeed: 4
   rockProjectile: {fileID: 4152665003659853540, guid: e5038d4f61f8dfa4d88bd68cbddc4ee7, type: 3}
-  rockSpeed: 3
+  rockSpeed: 1
   game: 0
   screenPos: {x: 0, y: 0}
   worldPos: {x: 0, y: 0}
