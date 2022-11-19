@@ -12,14 +12,20 @@ public class Dialogue : Action
     [Tooltip ("Interval between each letter.")]
     [SerializeField] float typingInterval;
     [SerializeField] string continueButton;
+    [SerializeField] string[] responses;
 
     Image dialoguePanel;
+    Image dialogueClose;
     TMP_Text dialogueText;
 
     void Awake()
     {
         dialoguePanel = GameObject.Find("dialogue panel").GetComponent<Image>();
         dialogueText = GameObject.Find("dialogue text").GetComponent<TMP_Text>();
+        dialogueClose = GameObject.Find("dialogue close").GetComponent<Image>();
+
+        dialoguePanel.gameObject.SetActive(false);
+        dialogueClose.gameObject.SetActive(false);
     }
     void OnEnable()
     {
@@ -28,6 +34,8 @@ public class Dialogue : Action
         dialogueText.text = "";
 
         StartCoroutine(ContinueDialogue());
+        dialoguePanel.gameObject.SetActive(true);
+        dialogueClose.gameObject.SetActive(true);
     }
 
     IEnumerator ContinueDialogue()

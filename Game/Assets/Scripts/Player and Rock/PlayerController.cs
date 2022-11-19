@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -41,6 +42,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name != "Level 1")
+        {
+            game = false;
+        }
         // Get the horizontal and vertical axi for movement
         pMovement.x = Input.GetAxisRaw("Horizontal");
         pMovement.y = Input.GetAxisRaw("Vertical");
@@ -48,10 +54,10 @@ public class PlayerController : MonoBehaviour
         animator.SetInteger("horizontal walk", (int) pMovement.x);
         animator.SetInteger("vertical walk", (int) pMovement.y);
         
-        if (Input.GetMouseButtonDown(0))
+        if (game == true && Input.GetMouseButtonDown(0))
         {
             Throw(); // Throw method created down below
-           // hasRock = false;
+            hasRock = false;
         }
 
         //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);

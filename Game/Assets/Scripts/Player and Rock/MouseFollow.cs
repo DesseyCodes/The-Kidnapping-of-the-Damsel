@@ -18,7 +18,7 @@ public class MouseFollow : MonoBehaviour
         screenPos = Input.mousePosition;
         worldPos = Camera.main.ScreenToWorldPoint(screenPos);
 
-        Cursor.visible = false;
+       // Cursor.visible = false;
 
 
         transform.position = worldPos;
