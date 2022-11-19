@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-// Add: Make dialogues work with cutscenes.
 public class Dialogue : Action
 {
     [TextArea(3, 10)]
@@ -29,13 +28,13 @@ public class Dialogue : Action
     }
     void OnEnable()
     {
-        // Calling a dialogue panel's SetActive(true) causes a hiccup. So I'm changing the alpha instead.
-        SetPanelAlpha(0.42f);
+        //SetPanelAlpha(0.42f);
         dialogueText.text = "";
 
-        StartCoroutine(ContinueDialogue());
         dialoguePanel.gameObject.SetActive(true);
         dialogueClose.gameObject.SetActive(true);
+        StartCoroutine(ContinueDialogue());
+        
     }
 
     IEnumerator ContinueDialogue()
@@ -79,7 +78,9 @@ public class Dialogue : Action
 
             if(Input.GetButtonDown(continueButton))
             {
-                SetPanelAlpha(0);
+                //SetPanelAlpha(0);
+                dialoguePanel.gameObject.SetActive(false);
+                dialogueClose.gameObject.SetActive(false);
                 dialogueText.text = "";
                 canEnd = true;
             }
