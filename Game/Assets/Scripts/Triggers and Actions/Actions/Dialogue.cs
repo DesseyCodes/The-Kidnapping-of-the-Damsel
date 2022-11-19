@@ -14,7 +14,6 @@ public class Dialogue : Action
     [SerializeField] string[] responses;
 
     Image dialoguePanel;
-    Image nextButton;
     Image dialogueClose;
     TMP_Text dialogueText;
 
@@ -23,25 +22,17 @@ public class Dialogue : Action
         dialoguePanel = GameObject.Find("dialogue panel").GetComponent<Image>();
         dialogueText = GameObject.Find("dialogue text").GetComponent<TMP_Text>();
         dialogueClose = GameObject.Find("dialogue close").GetComponent<Image>();
-        nextButton = GameObject.Find("next button").GetComponent<Image>();
 
-        //Set all these as inactive so that they only show up
-        //in dialogue
         dialoguePanel.gameObject.SetActive(false);
         dialogueClose.gameObject.SetActive(false);
-        nextButton.gameObject.SetActive(false);
     }
     void OnEnable()
     {
         //SetPanelAlpha(0.42f);
         dialogueText.text = "";
 
-        // Set all of these to active so that they
-        // show up in dialogue
         dialoguePanel.gameObject.SetActive(true);
         dialogueClose.gameObject.SetActive(true);
-        nextButton.gameObject.SetActive(true);
-
         StartCoroutine(ContinueDialogue());
         
     }
