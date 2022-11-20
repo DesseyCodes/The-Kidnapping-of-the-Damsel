@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class NPCMovement : MonoBehaviour
 {
+    [SerializeField] Vector2 minPosition, maxPosition;
 
     private Rigidbody2D npcRB;
-    public float speed;
 
-    public Transform limit1;
+    public float mSpeed;
+
+    public Vector2 randomPosition;
+
     // Start is called before the first frame update
     void Start()
     {
-        npcRB = GetComponent<Rigidbody2D>();
+         randomPosition = new Vector2(
+            Random.Range(minPosition.x, maxPosition.x),
+            Random.Range(minPosition.y, maxPosition.y));
 
+        npcRB = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.Translate(transform.right * speed);
+
+        npcRB.velocity = npcRB.velocity.normalized * mSpeed;
+        npcRB.AddForce(randomPosition.normalized * mSpeed * Time.deltaTime);
     }
 }
