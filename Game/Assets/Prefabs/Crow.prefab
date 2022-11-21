@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3869627833441905116}
   - component: {fileID: 4707915552659060193}
-  - component: {fileID: 5488987223513155228}
   - component: {fileID: 5274767764934525512}
-  - component: {fileID: 2337418104286070365}
   - component: {fileID: 3590165027501367348}
+  - component: {fileID: 5488987223513155228}
+  - component: {fileID: 2337418104286070365}
+  - component: {fileID: -851976539661651704}
   m_Layer: 0
   m_Name: Crow
   m_TagString: Untagged
@@ -88,22 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5488987223513155228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8580480173414085361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f8a5bad4e3a8b54f8bba78d7fef24e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints: {fileID: 0}
-  speed: 3
-  waitTime: 1
-  nextPosHighlight: {fileID: 2714266187943924701, guid: e2ff62f53b363c045a9e373e24f1b9d5, type: 3}
 --- !u!50 &5274767764934525512
 Rigidbody2D:
   serializedVersion: 4
@@ -120,24 +105,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6d427e04e3705e24c8ebd5f74c451286, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2337418104286070365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8580480173414085361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8282654a7bc271242b221c1aeb1bc8fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 1
 --- !u!70 &3590165027501367348
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -154,3 +126,46 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0540479, y: 0.9728384}
   m_Size: {x: 9.55725, y: 11.394831}
   m_Direction: 0
+--- !u!114 &5488987223513155228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580480173414085361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f8a5bad4e3a8b54f8bba78d7fef24e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: {fileID: 0}
+  speed: 3
+  waitTime: 1
+  randomPositions: 0
+  nextPosHighlight: {fileID: 2714266187943924701, guid: e2ff62f53b363c045a9e373e24f1b9d5, type: 3}
+--- !u!114 &2337418104286070365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580480173414085361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8282654a7bc271242b221c1aeb1bc8fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 1
+--- !u!114 &-851976539661651704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580480173414085361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dab7f2115119ea40a366fee088e8d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: -1
