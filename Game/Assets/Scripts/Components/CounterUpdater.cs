@@ -19,6 +19,7 @@ public class CounterUpdater : MonoBehaviour
 
     void OnDestroy()
     {
-        counter.UpdateCounter(value);
+        if(counter != null)
+            counter.UpdateCounter(value);
     }
 }
