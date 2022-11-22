@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 public class NPCMovement : MonoBehaviour
 {
     [SerializeField] Vector2 minPosition, maxPosition;
@@ -24,9 +25,9 @@ public class NPCMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        randomPosition = new Vector2(
-           Random.Range(minPosition.x, maxPosition.x),
-           Random.Range(minPosition.y, maxPosition.y));
+       // randomPosition = new Vector2(
+           //Random.Range(minPosition.x, maxPosition.x),
+          // Random.Range(minPosition.y, maxPosition.y));
         //randomPosition = new Vector2(
         // Random.Range(minPosition.x, maxPosition.x),
         // Random.Range(minPosition.y, maxPosition.y));
@@ -40,8 +41,6 @@ public class NPCMovement : MonoBehaviour
     void FixedUpdate()
     {
 
-        npcRB.velocity = npcRB.velocity.normalized * mSpeed;
-        npcRB.AddForce(randomPosition.normalized * mSpeed * Time.deltaTime);
         npcRB.velocity = new Vector2(walkdir1.transform.position.x, walkdir1.transform.position.y) * mSpeed * Time.deltaTime;
         npcRB.AddForce(walkdir1.transform.position * mSpeed * Time.deltaTime);
     }
