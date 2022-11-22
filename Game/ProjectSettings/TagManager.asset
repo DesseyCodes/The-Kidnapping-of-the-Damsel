@@ -49,14 +49,14 @@ TagManager:
   - name: Environmental
     uniqueID: 383695103
     locked: 0
-  - name: Player
-    uniqueID: 2783698451
-    locked: 0
   - name: NPC
     uniqueID: 1392978439
     locked: 0
   - name: Buildings
     uniqueID: 474375051
+    locked: 0
+  - name: Player
+    uniqueID: 2783698451
     locked: 0
   - name: Mouse
     uniqueID: 613517381
