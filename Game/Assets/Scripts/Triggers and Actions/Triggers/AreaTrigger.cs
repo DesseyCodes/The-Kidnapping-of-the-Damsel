@@ -25,7 +25,7 @@ public class AreaTrigger : Trigger
     void Update()
     {
         if (button != "" && Input.GetButtonDown(button) && inTrigger)
-            EnableAction();
+            EnableActions();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -33,7 +33,7 @@ public class AreaTrigger : Trigger
         if(other.gameObject.tag == gameObjectTag)
 
             if(enterArea)
-                EnableAction();
+                EnableActions();
 
             else if(stayInArea)
                 inTrigger = true;
@@ -43,7 +43,7 @@ public class AreaTrigger : Trigger
         if(other.gameObject.tag == gameObjectTag)
 
             if(exitArea)
-                EnableAction();
+                EnableActions();
                 
             else if(stayInArea)
                 inTrigger = false;

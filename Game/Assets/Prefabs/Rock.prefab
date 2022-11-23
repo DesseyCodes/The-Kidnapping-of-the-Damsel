@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1511268845
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cca9fcd62ab05ce44a8a67f3ff7b19c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -139,3 +139,6 @@ MonoBehaviour:
   bounces: 3
   canBreak: 1
   stopTime: 0.1
+  treeHitSound: {fileID: 8300000, guid: 4281dd1cb5bf3ed4882746fb659e4a13, type: 3}
+  defaultHitSound: {fileID: 0}
+  volume: 0.8

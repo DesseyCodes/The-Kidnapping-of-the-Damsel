@@ -9,10 +9,11 @@ public class Rock : MonoBehaviour
     [SerializeField] bool canBreak;
     [Tooltip ("Time in seconds to stop after last collision.\nOnly works if the rock doesn't break.")]
     [SerializeField] float stopTime;
+    [SerializeField] AudioClip treeHitSound, defaultHitSound;
+    [SerializeField] float volume;
     int bouncesLeft;
     WaitForSeconds waitForStopTime;
     Rigidbody2D rb;
-
 
     void Start()
     {
@@ -24,20 +25,25 @@ public class Rock : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D other)
     {
+        if(other.gameObject.tag == "Environmental")
+            AudioSource.PlayClipAtPoint(treeHitSound, transform.position, volume);
+        else if(defaultHitSound != null)
+            AudioSource.PlayClipAtPoint(defaultHitSound, transform.position, volume);
+
         Damageable damageable = other.gameObject.GetComponent<Damageable>();
 
         if (damageable != null)
-            damageable.ChangeHP(damage);
+            damageable.ChangeHP(-damage);
 
-            this.bouncesLeft--;
+        this.bouncesLeft--;
         
-            if(bouncesLeft < 0)
-            {
-                if(canBreak)
-                    Destroy(gameObject);
-                else
-                    StartCoroutine(StopMoving());
-            }
+        if(bouncesLeft < 0)
+        {
+            if(canBreak)
+                Destroy(gameObject);
+            else
+                StartCoroutine(StopMoving());
+        }
     }   
 
     IEnumerator StopMoving()

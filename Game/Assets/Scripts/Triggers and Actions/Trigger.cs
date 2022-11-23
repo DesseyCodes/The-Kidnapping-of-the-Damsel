@@ -14,7 +14,7 @@ public class Trigger : MonoBehaviour
     int actionIndex;
     protected bool canTrigger = true;
 
-    protected void EnableAction()
+    protected void EnableActions()
     {
         if (actions[0] == null || actions.Length == 0)
             Debug.Log(gameObject.name + ": No actions set to this trigger");
