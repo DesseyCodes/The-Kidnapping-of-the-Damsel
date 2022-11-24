@@ -3,27 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - NPC
-  - Environmental
-<<<<<<< HEAD
-  - PlayerHurt
-=======
-  - rock
->>>>>>> 9269623a4262d84bdcaeef7e929c08202eaee37b
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
-  - Trees
-  - Ground
-  - Rock
-  - Environmental
-  - NPC
-  - Building
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -47,22 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Ground
-    uniqueID: 469830361
-    locked: 0
-  - name: Environmental
-    uniqueID: 383695103
-    locked: 0
-  - name: NPC
-    uniqueID: 1392978439
-    locked: 0
-  - name: Buildings
-    uniqueID: 474375051
-    locked: 0
-  - name: Player
-    uniqueID: 2783698451
-    locked: 0
-  - name: Mouse
-    uniqueID: 613517381
     locked: 0
