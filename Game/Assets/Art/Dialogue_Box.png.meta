@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c25ae27f9af5d5d4c88cab465e6feacf
+guid: 7ef7a831208a9f840aa179dd9cf80355
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,85 +117,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boy_2_idle_0
+      name: Dialogue_Box_0
       rect:
         serializedVersion: 2
         x: 8
-        y: 0
-        width: 18
-        height: 31
+        y: 50
+        width: 28
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8769bad956a360b4bb159f8349e8648b
-      internalID: 853604206
+      spriteID: 5d5f138d0ffef2b4cabc5b4bd348bda4
+      internalID: -1715307600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boy_2_idle_1
+      name: Dialogue_Box_1
       rect:
         serializedVersion: 2
-        x: 41
-        y: 0
-        width: 16
-        height: 31
+        x: 3
+        y: 23
+        width: 75
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f875f981fdbb60a46b7248d974821a54
-      internalID: -1166927019
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boy_2_idle_2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 18
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbe5c44d7ae7d2347ba01bfeac20124f
-      internalID: -77667598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boy_2_idle_3
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 0
-        width: 16
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85ca1dc3a664d0c41aab3300d6066114
-      internalID: 1356814114
+      spriteID: 0eea3a1632ba59a40b43af67b3914285
+      internalID: -227232048
       vertices: []
       indices: 
       edges: []
@@ -211,10 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boy_2_idle_0: 853604206
-      boy_2_idle_2: -77667598
-      boy_2_idle_1: -1166927019
-      boy_2_idle_3: 1356814114
+      Dialogue_Box_1: -227232048
+      Dialogue_Box_0: -1715307600
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
