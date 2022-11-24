@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC
   - Environmental
+  - PlayerHurt
   layers:
   - Default
   - TransparentFX

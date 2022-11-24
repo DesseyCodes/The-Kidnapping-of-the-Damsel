@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7347675997075445399}
   m_Layer: 8
   m_Name: Rock
-  m_TagString: Untagged
+  m_TagString: PlayerHurt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1511268845
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cca9fcd62ab05ce44a8a67f3ff7b19c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -121,9 +121,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0010088179, y: -0.0070619415}
+  m_Offset: {x: 0.00018427959, y: -0.0070619415}
   serializedVersion: 2
-  m_Radius: 0.051044554
+  m_Radius: 0.06341269
 --- !u!114 &-7347675997075445399
 MonoBehaviour:
   m_ObjectHideFlags: 0

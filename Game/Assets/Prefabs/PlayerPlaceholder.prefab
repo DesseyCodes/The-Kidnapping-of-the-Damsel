@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 4292687417365290635}
   - component: {fileID: 1994792512}
   - component: {fileID: 1994792513}
+  - component: {fileID: 679990262}
   m_Layer: 3
   m_Name: PlayerPlaceholder
   m_TagString: Player
@@ -192,7 +193,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1511268845
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -471835625, guid: 89b3dd5924a0e4e45873f3ddce0de308, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -224,7 +225,7 @@ MonoBehaviour:
   - {fileID: -471835625, guid: 89b3dd5924a0e4e45873f3ddce0de308, type: 3}
   - {fileID: 882245312, guid: 89b3dd5924a0e4e45873f3ddce0de308, type: 3}
   pSpeed: 4
-  rockProjectile: {fileID: 4152665003659853540, guid: e5038d4f61f8dfa4d88bd68cbddc4ee7, type: 3}
+  rockProjectile: {fileID: 4064644121091950571, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
   rockSpeed: 1
   game: 0
   screenPos: {x: 0, y: 0}
@@ -242,7 +243,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.901856
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -264,7 +265,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0012766123, y: 0.0021148175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -275,7 +276,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.22, y: 0.31}
+  m_Size: {x: 0.23021293, y: 0.33045164}
   m_EdgeRadius: 0
 --- !u!95 &1994792513
 Animator:
@@ -297,3 +298,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &679990262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4292687417365290639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b394d8c50ffc6664ca4dde129d2ef620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  heartNum: 3
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeart: {fileID: 21300000, guid: 261e0b0292cba314e9c7c8c21342011f, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 3e01989c4f5fcbf43bad9da8b9846b42, type: 3}
