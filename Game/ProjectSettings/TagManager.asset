@@ -6,7 +6,11 @@ TagManager:
   tags:
   - NPC
   - Environmental
+<<<<<<< HEAD
   - PlayerHurt
+=======
+  - rock
+>>>>>>> 9269623a4262d84bdcaeef7e929c08202eaee37b
   layers:
   - Default
   - TransparentFX

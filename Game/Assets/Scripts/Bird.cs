@@ -10,6 +10,8 @@ public class Bird : MonoBehaviour
     [SerializeField] bool randomPositions;
     [Tooltip ("A game object with a sprite renderer.")]
     [SerializeField] GameObject nextPosHighlight;
+    [SerializeField] AudioClip defeatSound;
+    [SerializeField] float volume;
     Rigidbody2D rb;
     Vector2[] positions;
     Vector2 nextPosition;
@@ -36,7 +38,7 @@ public class Bird : MonoBehaviour
         currentIndex = 0;
         
         posHighlight = Instantiate(nextPosHighlight, transform.position, Quaternion.identity);
-        nextPosHighlight.transform.position = nextPosition;
+        posHighlight.transform.position = nextPosition;
     }
 
     void FixedUpdate()
@@ -111,11 +113,16 @@ public class Bird : MonoBehaviour
         gotNextPos = false;
         timer = waitTime;
         // previousPosition = currentPosition;
-        
     }
 
     void OnDestroy()
     {
         Destroy(posHighlight);
+
+        // OnDestroy is also called when unloading a scene or exiting play mode.
+        // This return doesn't let the next lines run and instatiate game objects ("one shot audio" in this case) at that time.
+        if(!gameObject.scene.isLoaded) return;
+
+        AudioSource.PlayClipAtPoint(defeatSound, transform.position, volume);
     }
 }

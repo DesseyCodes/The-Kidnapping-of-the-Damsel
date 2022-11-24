@@ -139,3 +139,6 @@ MonoBehaviour:
   bounces: 3
   canBreak: 1
   stopTime: 0.1
+  treeHitSound: {fileID: 8300000, guid: 4281dd1cb5bf3ed4882746fb659e4a13, type: 3}
+  defaultHitSound: {fileID: 0}
+  volume: 0.8

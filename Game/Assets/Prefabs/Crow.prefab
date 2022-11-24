@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1511268845
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 260447b81ec3146439aa1c540d3e692f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -143,6 +143,8 @@ MonoBehaviour:
   waitTime: 1
   randomPositions: 0
   nextPosHighlight: {fileID: 2714266187943924701, guid: e2ff62f53b363c045a9e373e24f1b9d5, type: 3}
+  defeatSound: {fileID: 8300000, guid: 1bd973013a5a87948af5c6f451e55504, type: 3}
+  volume: 1
 --- !u!114 &2337418104286070365
 MonoBehaviour:
   m_ObjectHideFlags: 0

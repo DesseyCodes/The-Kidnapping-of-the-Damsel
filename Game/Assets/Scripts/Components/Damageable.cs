@@ -14,7 +14,7 @@ public class Damageable : MonoBehaviour
 
     public void ChangeHP(int value)
     {
-        currentHP -= value;
+        currentHP += value;
 
         if (currentHP > hitPoints)
             currentHP = hitPoints;

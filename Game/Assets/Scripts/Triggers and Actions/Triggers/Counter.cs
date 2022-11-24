@@ -23,8 +23,8 @@ public class Counter : Trigger
         currentCount += value;
         
         if(subtractiveCounter && currentCount <= 0)
-            EnableAction();
+            EnableActions();
         else if(currentCount == count)
-            EnableAction();
+            EnableActions();
     }
 }
