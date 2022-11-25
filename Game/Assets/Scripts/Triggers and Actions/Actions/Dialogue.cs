@@ -10,7 +10,6 @@ public class Dialogue : Action
     [SerializeField] string[] messages;
     [Tooltip ("Interval between each letter.")]
     [SerializeField] float typingInterval;
-    [SerializeField] string continueButton;
     [SerializeField] string[] responses;
 
     Image dialoguePanel;
@@ -28,13 +27,12 @@ public class Dialogue : Action
     }
     void OnEnable()
     {
-        //SetPanelAlpha(0.42f);
+        //dialogueClose.gameObject.SetActive(true);
         dialogueText.text = "";
-
+        dialogueText.gameObject.SetActive(true);
         dialoguePanel.gameObject.SetActive(true);
-        dialogueClose.gameObject.SetActive(true);
-        StartCoroutine(ContinueDialogue());
         
+        StartCoroutine(ContinueDialogue());
     }
 
     IEnumerator ContinueDialogue()
@@ -53,7 +51,7 @@ public class Dialogue : Action
         {
             yield return null;
 
-            if(Input.GetButtonDown(continueButton))
+            if(Input.GetButtonDown("Interact"))
             {   
                 dialogueText.text = "";
 
@@ -76,22 +74,15 @@ public class Dialogue : Action
         {
             yield return null;
 
-            if(Input.GetButtonDown(continueButton))
+            if(Input.GetButtonDown("Interact"))
             {
-                //SetPanelAlpha(0);
+                //dialogueClose.gameObject.SetActive(false);
                 dialoguePanel.gameObject.SetActive(false);
-                dialogueClose.gameObject.SetActive(false);
                 dialogueText.text = "";
+                dialogueText.gameObject.SetActive(false);
                 canEnd = true;
             }
         }
         SignalToContinue();
-    }
-    
-    void SetPanelAlpha(float alpha)
-    {
-        Color c = dialoguePanel.color;
-        c.a = alpha;
-        dialoguePanel.color = c;
     }
 }

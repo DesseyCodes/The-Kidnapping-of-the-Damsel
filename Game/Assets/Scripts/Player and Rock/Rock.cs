@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rock : MonoBehaviour
 {
-    int damage;
+    [SerializeField] int damage;
     [SerializeField] int bounces;
     [SerializeField] bool canBreak;
     [Tooltip ("Time in seconds to stop after last collision.\nOnly works if the rock doesn't break.")]
@@ -17,7 +17,6 @@ public class Rock : MonoBehaviour
 
     void Start()
     {
-        damage = 1;
         bouncesLeft = bounces;
         rb = GetComponent<Rigidbody2D>();
         waitForStopTime = new WaitForSeconds(stopTime);
@@ -25,7 +24,7 @@ public class Rock : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "Environmental")
+        if(other.gameObject.tag == "trees")
             AudioSource.PlayClipAtPoint(treeHitSound, transform.position, volume);
         else if(defaultHitSound != null)
             AudioSource.PlayClipAtPoint(defaultHitSound, transform.position, volume);
