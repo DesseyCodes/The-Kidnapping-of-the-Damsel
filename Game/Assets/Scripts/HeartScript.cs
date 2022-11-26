@@ -57,10 +57,10 @@ public class HeartScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("PlayerHurt"))
+        if (collision.gameObject.tag.Equals("Rock") || collision.gameObject.tag.Equals("Bird"))
         {
-            Debug.Log("We hit!");
-            Damage();
+            Debug.Log("We got hit!");
+            health--;
         }
     }
 }
