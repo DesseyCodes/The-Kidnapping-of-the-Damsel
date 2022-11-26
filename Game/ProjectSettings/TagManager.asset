@@ -50,6 +50,9 @@ TagManager:
   - name: Player
     uniqueID: 4002683693
     locked: 0
+  - name: Environmental
+    uniqueID: 2647973857
+    locked: 0
   - name: Buildings
     uniqueID: 2434924163
     locked: 0

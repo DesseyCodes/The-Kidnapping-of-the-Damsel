@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D playerRB;
     private SpriteRenderer playerSR;
+    private BoxCollider2D playerBC;
 
     private Animator animator;
     private AudioSource audioSource;
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         playerSR = GetComponent<SpriteRenderer>();
+        playerBC = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         //hasRock = true;
@@ -108,5 +110,4 @@ public class PlayerController : MonoBehaviour
         rockRB.AddForce(new Vector2 (worldPos.x - launchOffset.position.x +1, worldPos.y - launchOffset.position.y +1) * rockSpeed, ForceMode2D.Impulse); // Apply an impulse force in the direction that would be up
         audioSource.PlayOneShot(throwSound, throwVolume);
     }
-        
 }
