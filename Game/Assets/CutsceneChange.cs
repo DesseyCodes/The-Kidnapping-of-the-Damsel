@@ -14,7 +14,7 @@ public class CutsceneChange : MonoBehaviour
 
     IEnumerator NextLevel()
     {
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(36.5f);
         SceneManager.LoadScene(sceneIndex);
     }
 }

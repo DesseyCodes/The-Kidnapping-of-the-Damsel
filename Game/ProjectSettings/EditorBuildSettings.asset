@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VillageSquare.unity
     guid: 29b8889ef6f9aa9459a7c078387a4e16
+  - enabled: 1
+    path: Assets/Scenes/IntroCutscene.unity
+    guid: 7c5226fd204a03047b5a6d953bb6fae4
   m_configObjects: {}
