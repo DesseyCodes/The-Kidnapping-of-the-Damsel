@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         playerBC = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        //hasRock = true;
+        hasRock = true;
         game = true;
     }
 
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name != "Level 1")
         {
-            //game = false;
+            game = false;
         }
         // Get the horizontal and vertical axi for movement
         pMovement.x = Input.GetAxisRaw("Horizontal");
@@ -59,11 +59,15 @@ public class PlayerController : MonoBehaviour
 
         animator.SetInteger("horizontal walk", (int) pMovement.x);
         animator.SetInteger("vertical walk", (int) pMovement.y);
+        float xMovement = animator.GetInteger("horizontal walk");
+        float yMovement = animator.GetInteger("vertical walk");
+
+        
         
         if (game == true && Input.GetMouseButtonDown(0))
         {
             Throw(); // Throw method created down below
-            //hasRock = false;
+            hasRock = false;
         }
 
         //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -76,7 +80,8 @@ public class PlayerController : MonoBehaviour
         screenPos = Input.mousePosition;
         worldPos = Camera.main.ScreenToWorldPoint(screenPos);
 
-        playerRB.MovePosition(playerRB.position + pMovement * pSpeed * Time.fixedDeltaTime); // The lovely Time.fixedDeltaTime prevents those of use with super fast computers from going crazy fast
+        playerRB.MovePosition(playerRB.position + pMovement * pSpeed * Time.fixedDeltaTime);
+
 
         if (Input.GetAxisRaw("Horizontal") == -1)
         {
