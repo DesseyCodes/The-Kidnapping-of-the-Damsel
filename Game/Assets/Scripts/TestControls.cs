@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TestControls : MonoBehaviour
 {   
     [SerializeField] KeyCode resetPositionKey;
+    [Tooltip ("If left at (0, 0) it will be set to the player's position.")]
     [SerializeField] Vector2 startPosition;
     [SerializeField] KeyCode reloadSceneKey;
     GameObject player;
