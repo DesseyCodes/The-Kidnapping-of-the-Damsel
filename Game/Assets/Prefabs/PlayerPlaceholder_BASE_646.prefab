@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 1994792512}
   - component: {fileID: 1994792513}
   m_Layer: 3
-  m_Name: PlayerPlaceholder
+  m_Name: PlayerPlaceholder_BASE_646
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,9 +191,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1511268845
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayerID: -292283603
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: -471835625, guid: 89b3dd5924a0e4e45873f3ddce0de308, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -224,12 +224,14 @@ MonoBehaviour:
   - {fileID: -471835625, guid: 89b3dd5924a0e4e45873f3ddce0de308, type: 3}
   - {fileID: 882245312, guid: 89b3dd5924a0e4e45873f3ddce0de308, type: 3}
   pSpeed: 4
-  rockProjectile: {fileID: 4152665003659853540, guid: e5038d4f61f8dfa4d88bd68cbddc4ee7, type: 3}
+  rockProjectile: {fileID: 4064644121091950571, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
   rockSpeed: 1
   game: 0
   screenPos: {x: 0, y: 0}
   worldPos: {x: 0, y: 0}
   mousePos: {x: 0, y: 0}
+  throwSound: {fileID: 0}
+  throwVolume: 0
 --- !u!50 &4292687417365290635
 Rigidbody2D:
   serializedVersion: 4
