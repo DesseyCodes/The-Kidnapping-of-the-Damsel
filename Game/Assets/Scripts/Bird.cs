@@ -80,9 +80,6 @@ public class Bird : MonoBehaviour
     }
     void ChoosePosition()
     {
-        // Fix: sometimes the bird moves back and forth for a while when selecting random waypoints. 
-        // Including more waypoints decreases the chance of selecting a previous one. Doesn't seem too noticeable with 6 waypoints.
-        // Storing the previous position could avoid it.
         Vector2 currentPosition = nextPosition;
         while(currentPosition == nextPosition)
         {
@@ -112,7 +109,6 @@ public class Bird : MonoBehaviour
         waited = false;
         gotNextPos = false;
         timer = waitTime;
-        // previousPosition = currentPosition;
     }
 
     void OnDestroy()
