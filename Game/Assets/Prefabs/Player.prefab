@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 1994792513}
   - component: {fileID: 4068507275535160998}
   m_Layer: 3
-  m_Name: PlayerPlaceholder
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,8 +192,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1511268845
-  m_SortingLayer: 5
+  m_SortingLayerID: -292283603
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -471835625, guid: 89b3dd5924a0e4e45873f3ddce0de308, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -225,7 +225,7 @@ MonoBehaviour:
   - {fileID: -471835625, guid: 89b3dd5924a0e4e45873f3ddce0de308, type: 3}
   - {fileID: 882245312, guid: 89b3dd5924a0e4e45873f3ddce0de308, type: 3}
   pSpeed: 4
-  rockProjectile: {fileID: 4152665003659853540, guid: e5038d4f61f8dfa4d88bd68cbddc4ee7, type: 3}
+  rockProjectile: {fileID: 4064644121091950571, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
   rockSpeed: 1
   game: 0
   screenPos: {x: 0, y: 0}
@@ -311,7 +311,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

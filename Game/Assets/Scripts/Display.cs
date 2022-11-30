@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneSwitch : MonoBehaviour
+public class Display : MonoBehaviour
 {
-    public int sceneIndex;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +15,10 @@ public class SceneSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        SceneManager.LoadScene(sceneIndex);
+        if (SceneManager.GetActiveScene().name.Contains("Village") || SceneManager.GetActiveScene().name.Contains("Level"))
+        {
+            DontDestroyOnLoad(this);
+            this.gameObject.SetActive(true);
+        }
     }
 }
