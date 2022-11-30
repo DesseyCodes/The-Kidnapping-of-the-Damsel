@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
         playerBC = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
         hasRock = true;
         game = true;
     }
@@ -63,12 +62,16 @@ public class PlayerController : MonoBehaviour
         float xMovement = animator.GetInteger("horizontal walk");
         float yMovement = animator.GetInteger("vertical walk");
 
-        //+++ Added this for playing the walk sound +++
-        if(pMovement.magnitude > 0.1f)
-            audioSource.volume = 1;
+        // Added this for playing the walk sound
+        if(pMovement.magnitude != 0)
+        {
+            if(!audioSource.isPlaying)
+                audioSource.Play();
+        }
         else
-            audioSource.volume = 0;
-        
+            audioSource.Stop();
+        //
+
         if (game == true && Input.GetMouseButtonDown(0))
         {
             Throw(); // Throw method created down below
@@ -115,6 +118,7 @@ public class PlayerController : MonoBehaviour
     public void Throw()
     {
         // Instantiate the rockProjectile object at the player's position and the player's rotation
+        
         GameObject rock = Instantiate(rockProjectile, launchOffset.position, launchOffset.rotation);
         Rigidbody2D rockRB = rock.GetComponent<Rigidbody2D>();
         rockRB.AddForce(new Vector2 (worldPos.x - launchOffset.position.x +1, worldPos.y - launchOffset.position.y +1) * rockSpeed, ForceMode2D.Impulse); // Apply an impulse force in the direction that would be up
