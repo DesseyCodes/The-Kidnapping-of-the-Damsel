@@ -37,8 +37,12 @@ public class Bird : MonoBehaviour
         nextPosition = positions[0];
         currentIndex = 0;
         
-        posHighlight = Instantiate(nextPosHighlight, transform.position, Quaternion.identity);
-        posHighlight.transform.position = nextPosition;
+        if (nextPosHighlight != null)
+        {
+            posHighlight = Instantiate(nextPosHighlight, transform.position, Quaternion.identity);
+            posHighlight.transform.position = nextPosition;
+        }
+        
     }
 
     void FixedUpdate()
@@ -99,7 +103,9 @@ public class Bird : MonoBehaviour
            
             nextPosition = positions[currentIndex];
         }
-        posHighlight.transform.position = nextPosition;
+
+        if(posHighlight != null)
+            posHighlight.transform.position = nextPosition;
                 
         gotNextPos = true;
     }
