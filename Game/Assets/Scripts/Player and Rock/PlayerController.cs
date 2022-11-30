@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
         playerBC = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
         hasRock = true;
         game = true;
     }
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name != "Level 1")
         {
-            game = false;
+            //game = false;
         }
         // Get the horizontal and vertical axi for movement
         pMovement.x = Input.GetAxisRaw("Horizontal");
@@ -62,7 +63,11 @@ public class PlayerController : MonoBehaviour
         float xMovement = animator.GetInteger("horizontal walk");
         float yMovement = animator.GetInteger("vertical walk");
 
-        
+        //+++ Added this for playing the walk sound +++
+        if(pMovement.magnitude > 0.1f)
+            audioSource.volume = 1;
+        else
+            audioSource.volume = 0;
         
         if (game == true && Input.GetMouseButtonDown(0))
         {

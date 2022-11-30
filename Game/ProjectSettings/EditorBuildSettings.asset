@@ -6,17 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: b9cac8086f29621438f77eaa847e1f3f
-  - enabled: 1
-    path: Assets/Scenes/PlayerTesting.unity
-    guid: bffc5dfae7f85044b9a0ab04fa5ea296
-  - enabled: 1
-    path: Assets/Scenes/LevelOne.unity
-    guid: 3c40ec271ba30c34a9bbcde150d0ef69
+    path: Assets/Scenes/IntroCutscene.unity
+    guid: 7c5226fd204a03047b5a6d953bb6fae4
   - enabled: 1
     path: Assets/Scenes/Village.unity
     guid: d220591e2bc525d49bbef4b871b69c1c
@@ -27,9 +18,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Village2.unity
     guid: 29b8889ef6f9aa9459a7c078387a4e16
   - enabled: 1
-    path: Assets/Scenes/IntroCutscene.unity
-    guid: 7c5226fd204a03047b5a6d953bb6fae4
-  - enabled: 1
     path: Assets/Scenes/VillageSquare.unity
     guid: 55be89263748f6b44b8de81abe80ee4e
+  - enabled: 1
+    path: Assets/Scenes/LevelOne.unity
+    guid: 3c40ec271ba30c34a9bbcde150d0ef69
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: b91078199ab33664c89199c62994a72a
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: a3c021d1323b64747a6ce5681eb2482f
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: ed199458305451a4e8d8a8ba0c8d883d
   m_configObjects: {}

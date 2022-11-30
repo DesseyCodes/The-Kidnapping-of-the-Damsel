@@ -55,7 +55,10 @@ MonoBehaviour:
   waitTime: 4
   randomPositions: 0
   nextPosHighlight: {fileID: 2714266187943924701, guid: e2ff62f53b363c045a9e373e24f1b9d5, type: 3}
-  defeatSound: {fileID: 8300000, guid: 139bebf126c3f9b48917647c8a459a07, type: 3}
+  defeatSounds:
+  - {fileID: 8300000, guid: 139bebf126c3f9b48917647c8a459a07, type: 3}
+  - {fileID: 8300000, guid: 7f8a03b99f12a984283a67cd415f21e3, type: 3}
+  - {fileID: 8300000, guid: 65161c0172b21a1408d4694742537c5b, type: 3}
   volume: 1
 --- !u!114 &2337418104286070365
 MonoBehaviour:
