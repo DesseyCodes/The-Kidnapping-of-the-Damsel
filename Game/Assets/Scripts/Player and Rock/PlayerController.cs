@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name != "Level 1")
         {
-            game = false;
+            //game = false;
         }
         // Get the horizontal and vertical axi for movement
         pMovement.x = Input.GetAxisRaw("Horizontal");

@@ -10,7 +10,7 @@ public class Bird : MonoBehaviour
     [SerializeField] bool randomPositions;
     [Tooltip ("A game object with a sprite renderer.")]
     [SerializeField] GameObject nextPosHighlight;
-    [SerializeField] AudioClip defeatSound;
+    [SerializeField] AudioClip[] defeatSounds;
     [SerializeField] float volume;
     Rigidbody2D rb;
     Vector2[] positions;
@@ -119,6 +119,6 @@ public class Bird : MonoBehaviour
         // This return doesn't let the next lines run and instatiate game objects ("one shot audio" in this case) at that time.
         if(!gameObject.scene.isLoaded) return;
 
-        AudioSource.PlayClipAtPoint(defeatSound, transform.position, volume);
+        AudioSource.PlayClipAtPoint(defeatSounds[Random.Range(0, 3)], transform.position, volume);
     }
 }

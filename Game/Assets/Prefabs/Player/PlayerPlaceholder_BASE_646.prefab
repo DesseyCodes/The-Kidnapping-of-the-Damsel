@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 4292687417365290635}
   - component: {fileID: 1994792512}
   - component: {fileID: 1994792513}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: PlayerPlaceholder_BASE_646
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ MonoBehaviour:
   pSpeed: 4
   rockProjectile: {fileID: 4064644121091950571, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
   rockSpeed: 1
-  game: 0
+  game: 1
   screenPos: {x: 0, y: 0}
   worldPos: {x: 0, y: 0}
   mousePos: {x: 0, y: 0}
