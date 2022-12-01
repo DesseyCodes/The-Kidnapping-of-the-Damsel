@@ -139,7 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  bounces: 3
+  rocks: 0
+  bounces: 10
   canBreak: 1
   stopTime: 0.1
   treeHitSound: {fileID: 8300000, guid: 4281dd1cb5bf3ed4882746fb659e4a13, type: 3}
