@@ -8,6 +8,7 @@ public class HeartScript : MonoBehaviour
     // Start is called before the first frame update
 
     public int health;
+    int currentHealth;
     public Image heartsDisplay;
     public Sprite[] hearts;
 
@@ -15,19 +16,20 @@ public class HeartScript : MonoBehaviour
     void Start()
     {
         pCollider = GetComponent<Collider2D>();
+        currentHealth = health;
     }
 
     void Damage()
     {
-        health--;
+        currentHealth--;
 
-        if (health == 3)
+        if (currentHealth == 3)
             heartsDisplay.sprite = hearts[2];
 
-        else if (health == 2)
+        else if (currentHealth == 2)
             heartsDisplay.sprite = hearts[1];
 
-        else if (health == 1)
+        else if (currentHealth == 1)
             heartsDisplay.sprite = hearts[0];
 
     }
