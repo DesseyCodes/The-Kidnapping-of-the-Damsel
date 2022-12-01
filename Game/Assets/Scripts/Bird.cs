@@ -10,15 +10,15 @@ public class Bird : MonoBehaviour
     [SerializeField] bool randomPositions;
     [Tooltip ("A game object with a sprite renderer.")]
     [SerializeField] GameObject nextPosHighlight;
-    [SerializeField] AudioClip[] defeatSounds;
-    [SerializeField] float volume;
+    [SerializeField] float shootInterval;
+    [SerializeField] GameObject projectile;
+    [SerializeField] Transform projSpawnPos;
     Rigidbody2D rb;
     Vector2[] positions;
     Vector2 nextPosition;
-    int currentIndex;
-    int routeIncrement;
+    int currentIndex, routeIncrement;
     bool reachedPos, waited, gotNextPos;
-    float timer;
+    float stopTimer, cooldown;
     GameObject posHighlight;
     
     void Start()
@@ -26,7 +26,8 @@ public class Bird : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         reachedPos = false;
         waited = false;
-        timer = waitTime;
+        stopTimer = waitTime;
+        cooldown = shootInterval;
 
         positions = new Vector2[waypoints.childCount];
         for(int i = 0; i < positions.Length; i++)
@@ -37,8 +38,12 @@ public class Bird : MonoBehaviour
         nextPosition = positions[0];
         currentIndex = 0;
         
-        posHighlight = Instantiate(nextPosHighlight, transform.position, Quaternion.identity);
-        posHighlight.transform.position = nextPosition;
+        if (nextPosHighlight != null)
+        {
+            posHighlight = Instantiate(nextPosHighlight, transform.position, Quaternion.identity);
+            posHighlight.transform.position = nextPosition;
+        }
+        
     }
 
     void FixedUpdate()
@@ -51,6 +56,9 @@ public class Bird : MonoBehaviour
 
             case (true, false, false):
                 Wait();
+                
+                if(projectile != null)
+                    Shoot();
             break;
 
             case (true, true, false):
@@ -73,9 +81,9 @@ public class Bird : MonoBehaviour
     }
     void Wait()
     {
-        timer -= Time.fixedDeltaTime;
+        stopTimer -= Time.fixedDeltaTime;
 
-        if(timer <= 0) 
+        if(stopTimer <= 0) 
             waited = true;
     }
     void ChoosePosition()
@@ -99,7 +107,9 @@ public class Bird : MonoBehaviour
            
             nextPosition = positions[currentIndex];
         }
-        posHighlight.transform.position = nextPosition;
+
+        if(posHighlight != null)
+            posHighlight.transform.position = nextPosition;
                 
         gotNextPos = true;
     }
@@ -108,17 +118,22 @@ public class Bird : MonoBehaviour
         reachedPos = false;
         waited = false;
         gotNextPos = false;
-        timer = waitTime;
+        stopTimer = waitTime;
+    }
+
+    void Shoot()
+    {
+        if(cooldown <= 0.0f)
+        {
+            Instantiate(projectile, projSpawnPos.position, Quaternion.identity);
+            cooldown = shootInterval;
+        }
+        else
+            cooldown -= Time.fixedDeltaTime;
     }
 
     void OnDestroy()
     {
         Destroy(posHighlight);
-
-        // OnDestroy is also called when unloading a scene or exiting play mode.
-        // This return doesn't let the next lines run and instatiate game objects ("one shot audio" in this case) at that time.
-        if(!gameObject.scene.isLoaded) return;
-
-        AudioSource.PlayClipAtPoint(defeatSounds[Random.Range(0, 3)], transform.position, volume);
     }
 }

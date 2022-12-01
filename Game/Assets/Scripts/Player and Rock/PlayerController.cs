@@ -113,8 +113,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-
-
     public void Throw()
     {
         // Instantiate the rockProjectile object at the player's position and the player's rotation
@@ -122,7 +120,8 @@ public class PlayerController : MonoBehaviour
         GameObject rock = Instantiate(rockProjectile, launchOffset.position, launchOffset.rotation);
         Rigidbody2D rockRB = rock.GetComponent<Rigidbody2D>();
         rockRB.AddForce(new Vector2 (worldPos.x - launchOffset.position.x +1, worldPos.y - launchOffset.position.y +1) * rockSpeed, ForceMode2D.Impulse); // Apply an impulse force in the direction that would be up
-        audioSource.PlayOneShot(throwSound, throwVolume);
+        //audioSource.PlayOneShot(throwSound, throwVolume);
+        AudioSource.PlayClipAtPoint(throwSound, Camera.main.transform.position, throwVolume);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

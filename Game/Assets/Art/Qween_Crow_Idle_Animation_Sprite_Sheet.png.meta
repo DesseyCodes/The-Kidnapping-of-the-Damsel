@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 77079cd07f19c3743a973087fdb6fa0e
+=======
+guid: 8bb695b2e0bb2094aa668e985b3804da
+>>>>>>> d895f70f933c80425e1c6c53b3a91a5fec3315dd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -113,6 +117,21 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
+=======
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> d895f70f933c80425e1c6c53b3a91a5fec3315dd
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -131,8 +150,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 8fd5cfd1a6df25d4b94a21a1b29c918a
       internalID: -759755210
+=======
+      spriteID: 048f47407f7df174f9c9e2bd6382b875
+      internalID: 1876326770
+>>>>>>> d895f70f933c80425e1c6c53b3a91a5fec3315dd
       vertices: []
       indices: 
       edges: []
@@ -144,7 +168,11 @@ TextureImporter:
         x: 93
         y: 8
         width: 56
+<<<<<<< HEAD
         height: 58
+=======
+        height: 62
+>>>>>>> d895f70f933c80425e1c6c53b3a91a5fec3315dd
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +180,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 4a3ede90c5fc8be41b84c2fb8da37602
       internalID: -353721251
+=======
+      spriteID: 3ddce93d18658c440ac8de6103598970
+      internalID: 1753840694
+>>>>>>> d895f70f933c80425e1c6c53b3a91a5fec3315dd
       vertices: []
       indices: 
       edges: []
@@ -169,8 +202,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD
       Qween_Crow_Idle_Animation_Sprite_Sheet_0: -759755210
       Qween_Crow_Idle_Animation_Sprite_Sheet_1: -353721251
+=======
+      Qween_Crow_Idle_Animation_Sprite_Sheet_0: 1876326770
+      Qween_Crow_Idle_Animation_Sprite_Sheet_1: 1753840694
+>>>>>>> d895f70f933c80425e1c6c53b3a91a5fec3315dd
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

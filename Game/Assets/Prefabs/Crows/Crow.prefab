@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6707717117840683687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4783952775733451895}
+  m_Layer: 0
+  m_Name: projSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4783952775733451895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6707717117840683687}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3869627833441905116}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8580480173414085361
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,7 +47,7 @@ GameObject:
   - component: {fileID: 4707915552659060193}
   - component: {fileID: 2451365570530175833}
   - component: {fileID: 5274767764934525512}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Crow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +65,8 @@ Transform:
   m_LocalPosition: {x: -2.43, y: 0.57, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4783952775733451895}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -53,13 +85,11 @@ MonoBehaviour:
   waypoints: {fileID: 0}
   speed: 3
   waitTime: 4
-  randomPositions: 0
-  nextPosHighlight: {fileID: 2714266187943924701, guid: e2ff62f53b363c045a9e373e24f1b9d5, type: 3}
-  defeatSounds:
-  - {fileID: 8300000, guid: 139bebf126c3f9b48917647c8a459a07, type: 3}
-  - {fileID: 8300000, guid: 7f8a03b99f12a984283a67cd415f21e3, type: 3}
-  - {fileID: 8300000, guid: 65161c0172b21a1408d4694742537c5b, type: 3}
-  volume: 1
+  randomPositions: 1
+  nextPosHighlight: {fileID: 0}
+  shootInterval: 0
+  projectile: {fileID: 0}
+  projSpawnPos: {fileID: 4783952775733451895}
 --- !u!114 &2337418104286070365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,6 +103,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
+  defeatSounds:
+  - {fileID: 8300000, guid: 139bebf126c3f9b48917647c8a459a07, type: 3}
+  - {fileID: 8300000, guid: 7f8a03b99f12a984283a67cd415f21e3, type: 3}
+  - {fileID: 8300000, guid: 65161c0172b21a1408d4694742537c5b, type: 3}
+  volume: 1
 --- !u!114 &-851976539661651704
 MonoBehaviour:
   m_ObjectHideFlags: 0

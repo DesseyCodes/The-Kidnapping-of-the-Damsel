@@ -19,8 +19,8 @@ TagManager:
   - Environmental
   - Player
   - Rock
-  - Barrier
-  - 
+  - Enemies
+  - EnemyProjectiles
   - 
   - 
   - 
