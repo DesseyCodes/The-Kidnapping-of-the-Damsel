@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3869627833441905116, guid: 416ad78b851ab92458aa9c400400fff8, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3869627833441905116, guid: 416ad78b851ab92458aa9c400400fff8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -496,67 +496,6 @@ Transform:
   m_Father: {fileID: 118694272}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &765038483
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -7347675997075445399, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: bounces
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4064644121091950571, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: m_Name
-      value: Rock with extra bounces
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798176002564694181, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798176002564694181, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -13.561354
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798176002564694181, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.340007
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798176002564694181, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798176002564694181, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798176002564694181, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798176002564694181, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798176002564694181, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798176002564694181, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798176002564694181, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7798176002564694181, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
 --- !u!1 &839742069
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +615,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3869627833441905116, guid: 7b8cc3db5aa044f449e76fae1ed2829d, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3869627833441905116, guid: 7b8cc3db5aa044f449e76fae1ed2829d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2184,11 +2123,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1512573447 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4064644121091950571, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-  m_PrefabInstance: {fileID: 765038483}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1575437145
 GameObject:
   m_ObjectHideFlags: 0
@@ -13816,7 +13750,7 @@ PrefabInstance:
     - target: {fileID: 4292687417365290636, guid: 028048a78f48a254da20b994f8053c6a, type: 3}
       propertyPath: rockProjectile
       value: 
-      objectReference: {fileID: 1512573447}
+      objectReference: {fileID: 4064644121091950571, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
     - target: {fileID: 4292687417365290637, guid: 028048a78f48a254da20b994f8053c6a, type: 3}
       propertyPath: m_RootOrder
       value: 3

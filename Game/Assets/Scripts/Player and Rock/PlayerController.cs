@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
    public Vector2 screenPos;
     public Vector2 worldPos;
     public Vector2 mousePos;
+    private Vector3 cameraZ;
     public AudioClip throwSound;
     public float throwVolume;
 
@@ -41,11 +42,14 @@ public class PlayerController : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         playerSR = GetComponent<SpriteRenderer>();
         playerBC = GetComponent<BoxCollider2D>();
+        cameraZ = new Vector3(0, 0, 2);
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         hasRock = true;
         game = true;
         rocks = 1;
+        if(SceneManager.GetActiveScene().name == "Level Boss")
+            rocks = 2;
     }
 
     // Update is called once per frame
@@ -71,7 +75,7 @@ public class PlayerController : MonoBehaviour
             audioSource.Stop();
         //
 
-        if (game == true && Input.GetMouseButtonDown(0) && rocks == 1)
+        if (game == true && Input.GetMouseButtonDown(0) && rocks > 0)
         {
             Throw(); // Throw method created down below
             rocks--;
@@ -118,7 +122,7 @@ public class PlayerController : MonoBehaviour
         
         GameObject rock = Instantiate(rockProjectile, launchOffset.position, launchOffset.rotation);
         Rigidbody2D rockRB = rock.GetComponent<Rigidbody2D>();
-        rockRB.AddForce(new Vector2 (worldPos.x - launchOffset.position.x +1, worldPos.y - launchOffset.position.y +1) * rockSpeed, ForceMode2D.Impulse); // Apply an impulse force in the direction that would be up
+        rockRB.AddForce(new Vector2 (worldPos.x - launchOffset.position.x, worldPos.y - launchOffset.position.y) * rockSpeed, ForceMode2D.Impulse); // Apply an impulse force in the direction that would be up
         //audioSource.PlayOneShot(throwSound, throwVolume);
         AudioSource.PlayClipAtPoint(throwSound, Camera.main.transform.position, throwVolume);
     }
