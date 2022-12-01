@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.Playables;
 
 // ADD: Allow for the name of each participant to be shown during the dialogue.
-public class Dialogue : Action
+public class DialogueTimeline : Action
 {
     [TextArea(3, 10)]
     [SerializeField] string[] messages;
@@ -39,8 +39,8 @@ public class Dialogue : Action
         //dialogueClose.gameObject.SetActive(true);
         dialogueText.text = "";
 
-        //if(timeline != null)
-            //timeline.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        if(timeline != null)
+            timeline.playableGraph.GetRootPlayable(0).SetSpeed(0);
 
         StartCoroutine(ContinueDialogue());
     }
@@ -96,8 +96,8 @@ public class Dialogue : Action
             }
         }
 
-        //if(timeline != null)
-            //timeline.playableGraph.GetRootPlayable(0).SetSpeed(1);
+        if(timeline != null)
+            timeline.playableGraph.GetRootPlayable(0).SetSpeed(1);
 
         SignalToContinue();
     }
