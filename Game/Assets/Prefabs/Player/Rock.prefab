@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -2744968476564991164}
   m_Layer: 8
   m_Name: Rock
-  m_TagString: Rock
+  m_TagString: PlayerHurt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  rocks: 0
   bounces: 10
   canBreak: 1
   stopTime: 0.1

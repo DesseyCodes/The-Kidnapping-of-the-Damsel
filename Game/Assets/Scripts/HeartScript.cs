@@ -7,7 +7,7 @@ public class HeartScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public int health;
+    public static int health;
     public int heartNum;
 
     public Image[] hearts;
