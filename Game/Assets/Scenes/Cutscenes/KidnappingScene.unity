@@ -105466,6 +105466,7 @@ GameObject:
   - component: {fileID: 1419150342}
   - component: {fileID: 1419150341}
   - component: {fileID: 1419150346}
+  - component: {fileID: 1419150347}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -105514,6 +105515,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 7777705025819753996, guid: 5510f772360650b4990a909d5ae2badd, type: 2}
     value: {fileID: 1419150341}
+  - key: {fileID: -282071833225513459, guid: 5510f772360650b4990a909d5ae2badd, type: 2}
+    value: {fileID: 1419150347}
   m_ExposedReferences:
     m_References: []
 --- !u!81 &1419150343
@@ -105589,12 +105592,43 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419150340}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44cafd2b475b10a48ad1988953b52454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIndex: 2
+  timer: 3
+--- !u!114 &1419150347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419150340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: e2b7378411169e141a74cf6ed31038bc, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1419150346}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &1751234725
 GameObject:
   m_ObjectHideFlags: 0

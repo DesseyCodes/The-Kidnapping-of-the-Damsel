@@ -1388,6 +1388,7 @@ GameObject:
   - component: {fileID: 1539632883}
   - component: {fileID: 1539632882}
   - component: {fileID: 1539632884}
+  - component: {fileID: 1539632885}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -1407,7 +1408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70aee361357ae2c40bc612b245a0da7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitUntilEnd: 0
+  waitUntilEnd: 1
   messages:
   - 'Good afternoon! I am mayor Jefferson, and today, we are gathered here to celebrate
     The Kidnapping of the Damsel!
@@ -1429,10 +1430,11 @@ MonoBehaviour:
 
 '
   - '[Main Character Name]! Congratulations, young lady!'
-  - Now, everyone. The King and Queen birds will be here soon.
-  - 'When they arrive, we must run around and act as if it is chaotic. '
-  - Once we notice that our damsel is missing, we'll stop, and Eric must begin his
-    quest of looking for her.
+  - Now, everyone. As you all know...
+  - Our damsel will be kidnapped in the dark of the night.
+  - In the morning, when we notice she's missing, Eric will begin his quest of going
+    after her.
+  - Everyone have a good evening, and let us all have a peaceful rest!
   typingInterval: 0.1
   responses: []
 --- !u!4 &1539632883
@@ -1465,7 +1467,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: a4371e7e0da503a45a786f922e45c5a2, type: 2}
-    - {fileID: 11400000, guid: 2559ccb9e8980e8488b2aa46a0e1cc81, type: 2}
+    - {fileID: 11400000, guid: e2b7378411169e141a74cf6ed31038bc, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -1483,18 +1485,32 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
+        - m_Target: {fileID: 1539632885}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
+--- !u!114 &1539632885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539632880}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44cafd2b475b10a48ad1988953b52454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 13
+  timer: 3
 --- !u!1 &1568674650
 GameObject:
   m_ObjectHideFlags: 0
@@ -23705,7 +23721,6 @@ GameObject:
   - component: {fileID: 1673123740}
   - component: {fileID: 1673123739}
   - component: {fileID: 1673123742}
-  - component: {fileID: 1673123743}
   m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -23802,19 +23817,6 @@ PlayableDirector:
     value: {fileID: 426732392}
   m_ExposedReferences:
     m_References: []
---- !u!114 &1673123743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673123738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44cafd2b475b10a48ad1988953b52454, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneIndex: 13
 --- !u!224 &1709516257 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3513682517380497823, guid: 74a17517d492dde40961b993e6b52170, type: 3}
@@ -24117,10 +24119,10 @@ RectTransform:
   m_Father: {fileID: 5422635599470403649}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.19600001, y: 0.052332547}
-  m_AnchorMax: {x: 0.8, y: 0.21300001}
-  m_AnchoredPosition: {x: 3.0812073, y: -4.123993}
-  m_SizeDelta: {x: -51.112198, y: 41.76088}
+  m_AnchorMin: {x: 0.14850375, y: 0.052332547}
+  m_AnchorMax: {x: 0.84225315, y: 0.25633335}
+  m_AnchoredPosition: {x: 5.0812073, y: -14.123993}
+  m_SizeDelta: {x: -123.1122, y: 21.76088}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5422635597853503762
 CanvasRenderer:
@@ -24213,7 +24215,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -37.092133, y: 9.082207, z: -24.443726, w: 16.123287}
+  m_margin: {x: -73.51511, y: -4.576416, z: -60.86676, w: 16.123287}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

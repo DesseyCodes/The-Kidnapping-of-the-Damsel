@@ -225,10 +225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 7.683333333333334
+  m_Time: 9.966666666666667
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: 2559ccb9e8980e8488b2aa46a0e1cc81, type: 2}
+  m_Asset: {fileID: 11400000, guid: e2b7378411169e141a74cf6ed31038bc, type: 2}
 --- !u!114 &-1671798084346426504
 MonoBehaviour:
   m_ObjectHideFlags: 1

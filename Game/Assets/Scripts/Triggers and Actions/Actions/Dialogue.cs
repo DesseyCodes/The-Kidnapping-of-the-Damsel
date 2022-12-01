@@ -39,14 +39,16 @@ public class Dialogue : Action
         dialogueText.gameObject.SetActive(true);
         dialoguePanel.gameObject.SetActive(true);
 
-        //if(timeline != null)
-            //timeline.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        if(timeline != null)
+            timeline.playableGraph.GetRootPlayable(0).SetSpeed(0);
 
         StartCoroutine(ContinueDialogue());
     }
 
+
     IEnumerator ContinueDialogue()
     {
+
         // Show first message.
         for(int i = 0; i < messages[0].Length; i++)
         {
