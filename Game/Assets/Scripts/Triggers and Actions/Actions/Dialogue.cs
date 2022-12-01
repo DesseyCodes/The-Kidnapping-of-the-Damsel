@@ -27,6 +27,7 @@ public class Dialogue : Action
         dialogueClose = GameObject.Find("dialogue close").GetComponent<Image>();
 
         dialoguePanel.gameObject.SetActive(false);
+        dialogueText.gameObject.SetActive(false);
         dialogueClose.gameObject.SetActive(false);
 
         timeline = Object.FindObjectOfType<PlayableDirector>();
@@ -38,8 +39,8 @@ public class Dialogue : Action
         dialogueText.gameObject.SetActive(true);
         dialoguePanel.gameObject.SetActive(true);
 
-        if(timeline != null)
-            timeline.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        //if(timeline != null)
+            //timeline.playableGraph.GetRootPlayable(0).SetSpeed(0);
 
         StartCoroutine(ContinueDialogue());
     }
