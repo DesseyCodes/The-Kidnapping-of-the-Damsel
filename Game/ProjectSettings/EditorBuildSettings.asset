@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 4.unity
     guid: ed199458305451a4e8d8a8ba0c8d883d
   - enabled: 1
+    path: Assets/Scenes/Level Boss.unity
+    guid: f3c2db5024b54094a968afb6ba9e8a4f
+  - enabled: 1
     path: Assets/Scenes/HistoryCutscene.unity
     guid: 7e81d32c1bd86304bb98cf50f8ff9a76
   m_configObjects: {}
