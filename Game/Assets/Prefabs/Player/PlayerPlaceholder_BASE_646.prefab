@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 4292687417365290637}
   - component: {fileID: 4292687417365290638}
   - component: {fileID: 4292687417365290636}
+  - component: {fileID: 8467091353599545769}
   - component: {fileID: 4292687417365290635}
   - component: {fileID: 1994792512}
   - component: {fileID: 1994792513}
@@ -233,6 +234,24 @@ MonoBehaviour:
   mousePos: {x: 0, y: 0}
   throwSound: {fileID: 8300000, guid: 31171f99370fc7c41bc0a3bdc55322a4, type: 3}
   throwVolume: 1
+  rocks: 0
+--- !u!114 &8467091353599545769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4292687417365290639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b394d8c50ffc6664ca4dde129d2ef620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartNum: 1
+  hearts:
+  - {fileID: 0}
+  fullHeart: {fileID: 21300000, guid: 261e0b0292cba314e9c7c8c21342011f, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 3e01989c4f5fcbf43bad9da8b9846b42, type: 3}
 --- !u!50 &4292687417365290635
 Rigidbody2D:
   serializedVersion: 4
