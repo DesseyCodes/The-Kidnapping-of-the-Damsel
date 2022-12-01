@@ -6,7 +6,6 @@ using UnityEngine.UI;
 using UnityEngine.Playables;
 
 // ADD: Allow for the name of each participant to be shown during the dialogue.
-// ADD: Allow for pausing and resuming a timeline.
 public class Dialogue : Action
 {
     [TextArea(3, 10)]
