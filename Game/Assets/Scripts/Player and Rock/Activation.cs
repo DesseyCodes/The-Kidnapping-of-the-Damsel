@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ignoreCollision : MonoBehaviour
+public class Activation : MonoBehaviour
 {
-    public BoxCollider2D collider1;
-    public BoxCollider2D collider2;
+    public GameObject target;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +14,6 @@ public class ignoreCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Physics2D.IgnoreCollision(collider1, collider2, true);
+        target.SetActive(true);
     }
 }

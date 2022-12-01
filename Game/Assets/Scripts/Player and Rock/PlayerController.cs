@@ -124,4 +124,12 @@ public class PlayerController : MonoBehaviour
         rockRB.AddForce(new Vector2 (worldPos.x - launchOffset.position.x +1, worldPos.y - launchOffset.position.y +1) * rockSpeed, ForceMode2D.Impulse); // Apply an impulse force in the direction that would be up
         audioSource.PlayOneShot(throwSound, throwVolume);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("npcBoundary"))
+        {
+            Physics2D.IgnoreCollision(this.GetComponent<BoxCollider2D>(), collision.collider);
+        }
+    }
 }

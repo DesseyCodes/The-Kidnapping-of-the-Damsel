@@ -47,13 +47,18 @@ public class NPCMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Environmental"))
+        if (collision.gameObject.CompareTag("npcBoundary"))
         {
             //transform.Rotate(new Vector2(0, 180));
             Debug.Log("We hit an environmental object!");
             //npcRB.MoveRotation(npcRB.rotation * 180);
             transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
             mSpeed *= -1;
+        }
+
+        if (!collision.gameObject.CompareTag("npcBoundary"))
+        {
+            Physics2D.IgnoreCollision(collision.collider, this.bCollider);
         }
     }
 }

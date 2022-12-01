@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class noDestroy : MonoBehaviour
 {
@@ -13,6 +14,13 @@ public class noDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DontDestroyOnLoad(this);
+        if (SceneManager.GetActiveScene().name.Equals("HistoryCutscene"))
+        {
+            Destroy(this);
+        }
+        else
+        {
+            DontDestroyOnLoad(this);
+        }
     }
 }

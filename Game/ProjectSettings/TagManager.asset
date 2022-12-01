@@ -8,6 +8,7 @@ TagManager:
   - PlayerHurt
   - Environmental
   - Rock
+  - npcBoundary
   layers:
   - Default
   - TransparentFX
@@ -56,4 +57,7 @@ TagManager:
     locked: 0
   - name: Buildings
     uniqueID: 2434924163
+    locked: 0
+  - name: Fire
+    uniqueID: 1080337545
     locked: 0
