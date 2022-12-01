@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 5274767764934525512}
   m_Layer: 9
   m_Name: Crow
-  m_TagString: Untagged
+  m_TagString: PlayerHurt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,6 +90,9 @@ MonoBehaviour:
   shootInterval: 0
   projectile: {fileID: 0}
   projSpawnPos: {fileID: 4783952775733451895}
+  bird1: {fileID: 0}
+  bird2: {fileID: 0}
+  birds: 2
 --- !u!114 &2337418104286070365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
+  hitSounds: []
   defeatSounds:
   - {fileID: 8300000, guid: 139bebf126c3f9b48917647c8a459a07, type: 3}
   - {fileID: 8300000, guid: 7f8a03b99f12a984283a67cd415f21e3, type: 3}

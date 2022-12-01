@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rock : MonoBehaviour
 {
     [SerializeField] int damage;
+    [SerializeField]
     public static int rocks;
     [SerializeField] int bounces;
     [SerializeField] bool canBreak;

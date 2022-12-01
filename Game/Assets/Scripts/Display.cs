@@ -15,7 +15,13 @@ public class Display : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().name.Contains("Village") || SceneManager.GetActiveScene().name.Contains("Level"))
+        if (SceneManager.GetActiveScene().name.Equals("MainMeu"))
+        {
+            Destroy(this);
+            this.gameObject.SetActive(false);
+        }
+
+        else
         {
             DontDestroyOnLoad(this);
             this.gameObject.SetActive(true);
