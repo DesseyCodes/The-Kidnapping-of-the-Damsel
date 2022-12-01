@@ -484,6 +484,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7955342406178972421, guid: 43226e49c4ae5b54c90a8957669ba943, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955342406178972425, guid: 43226e49c4ae5b54c90a8957669ba943, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43226e49c4ae5b54c90a8957669ba943, type: 3}
 --- !u!114 &481683034 stripped
@@ -492,7 +500,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 481683033}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2306,7 +2314,7 @@ GameObject:
   - component: {fileID: 1575437149}
   - component: {fileID: 1575437148}
   - component: {fileID: 1575437147}
-  - component: {fileID: 1575437146}
+  - component: {fileID: 1575437150}
   m_Layer: 0
   m_Name: EndLevel
   m_TagString: Untagged
@@ -2314,20 +2322,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1575437146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575437145}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b77ba8b2c40017f40ba87f3188b710ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitUntilEnd: 1
-  quitDelay: 1
 --- !u!114 &1575437147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2360,7 +2354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions:
   - {fileID: 1575437147}
-  - {fileID: 1575437146}
+  - {fileID: 1575437150}
   repeat: 0
   count: 2
   subtractiveCounter: 1
@@ -2379,6 +2373,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1575437150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575437145}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fbb819e9672094b9c67ce776f0404c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitUntilEnd: 0
+  levelName: EndCutscene
+  loadDelay: 1
 --- !u!1 &1592795122
 GameObject:
   m_ObjectHideFlags: 0
