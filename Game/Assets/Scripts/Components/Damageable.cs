@@ -5,12 +5,15 @@ using UnityEngine;
 public class Damageable : MonoBehaviour
 {
     [SerializeField] int hitPoints;
+    [SerializeField] AudioClip[] hitSounds;
     [SerializeField] AudioClip[] defeatSounds;
     [SerializeField] float volume;
     int currentHP;
+    AudioSource audioSource;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         currentHP = hitPoints;
     }
 
@@ -23,6 +26,9 @@ public class Damageable : MonoBehaviour
             
         if(currentHP <= 0)
             Destroy(gameObject);
+
+        if(audioSource != null)
+            audioSource.PlayOneShot(hitSounds[Random.Range(0, hitSounds.Length-1)], volume);
     }
 
     void OnDestroy()
