@@ -227,7 +227,7 @@ MonoBehaviour:
   - {fileID: 882245312, guid: 89b3dd5924a0e4e45873f3ddce0de308, type: 3}
   pSpeed: 4
   rockProjectile: {fileID: 4064644121091950571, guid: 1d04b35d1a4ca6549bfa7163b86e6a41, type: 3}
-  rockSpeed: 1
+  rockSpeed: 1.5
   game: 1
   screenPos: {x: 0, y: 0}
   worldPos: {x: 0, y: 0}
@@ -248,10 +248,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartNum: 1
+  heartsDisplay: {fileID: 0}
   hearts:
-  - {fileID: 0}
-  fullHeart: {fileID: 21300000, guid: 261e0b0292cba314e9c7c8c21342011f, type: 3}
-  emptyHeart: {fileID: 21300000, guid: 3e01989c4f5fcbf43bad9da8b9846b42, type: 3}
+  - {fileID: 21300000, guid: 702a9b31ef6c04a4586a579dcd470828, type: 3}
+  - {fileID: 21300000, guid: cb89cc649a999774aa47b856f8676ff9, type: 3}
+  - {fileID: 21300000, guid: 9abbf32f1176c1d4da79362ebe51b49c, type: 3}
 --- !u!50 &4292687417365290635
 Rigidbody2D:
   serializedVersion: 4

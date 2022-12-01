@@ -8,11 +8,8 @@ public class HeartScript : MonoBehaviour
     // Start is called before the first frame update
 
     public static int health;
-    public int heartNum;
-
-    public Image[] hearts;
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
+    public Image heartsDisplay;
+    public Sprite[] hearts;
 
     private Collider2D pCollider;
     void Start()
@@ -20,47 +17,28 @@ public class HeartScript : MonoBehaviour
         pCollider = GetComponent<Collider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Damage();
-
-        if (health > heartNum)
-        {
-            health = heartNum;
-        }
-    }
-
     void Damage()
     {
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < health)
-            {
-                hearts[i].sprite = fullHeart;
-            }
-            else
-            {
-                hearts[i].sprite = emptyHeart;
-            }
+        health--;
 
-            if (i < heartNum)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
-        }
+        if (health == 3)
+            heartsDisplay.sprite = hearts[2];
+
+        else if (health == 2)
+            heartsDisplay.sprite = hearts[1];
+
+        else if (health == 1)
+            heartsDisplay.sprite = hearts[0];
+
     }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Rock") || collision.gameObject.tag.Equals("Bird"))
+        if (collision.gameObject.tag.Equals("Rock") || collision.gameObject.tag.Equals("Bird") || collision.gameObject.tag.Equals("PlayerHurt"))
         {
             Debug.Log("We got hit!");
-            health--;
+            Damage();
         }
     }
 }

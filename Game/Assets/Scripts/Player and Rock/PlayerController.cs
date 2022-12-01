@@ -134,9 +134,9 @@ public class PlayerController : MonoBehaviour
             Physics2D.IgnoreCollision(this.GetComponent<BoxCollider2D>(), collision.collider);
         }
 
-        if (collision.gameObject.tag.Equals("playerHurt"))
+        if (collision.gameObject.tag.Equals("PlayerHurt"))
         {
-            HeartScript.health--;
+            
         }
     }
 }
