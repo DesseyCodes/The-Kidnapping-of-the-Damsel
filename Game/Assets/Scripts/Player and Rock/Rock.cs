@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rock : MonoBehaviour
 {
     [SerializeField] int damage;
+    public static int rocks;
     [SerializeField] int bounces;
     [SerializeField] bool canBreak;
     [Tooltip ("Time in seconds to stop after last collision.\nOnly works if the rock doesn't break.")]
@@ -21,6 +22,7 @@ public class Rock : MonoBehaviour
         bouncesLeft = bounces;
         rb = GetComponent<Rigidbody2D>();
         waitForStopTime = new WaitForSeconds(stopTime);
+        rocks = 1;
     }
     
     void OnCollisionEnter2D(Collision2D other)
@@ -36,6 +38,7 @@ public class Rock : MonoBehaviour
             damageable.ChangeHP(-damage);
 
         this.bouncesLeft--;
+        rocks--;
         
         if(bouncesLeft < 0)
         {

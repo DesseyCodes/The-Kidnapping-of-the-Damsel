@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bird : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class Bird : MonoBehaviour
     bool reachedPos, waited, gotNextPos;
     float stopTimer, cooldown;
     GameObject posHighlight;
+    public GameObject bird1;
+    public GameObject bird2;
+    public int birds = 2;
     
     void Start()
     {
@@ -48,6 +52,20 @@ public class Bird : MonoBehaviour
 
     void FixedUpdate()
     {
+        //if (bird1 == null)
+        //{
+        //    birds--;
+        //}
+        //if (bird2 == null)
+        //{
+        //    birds--;
+        //}
+
+        //if (birds >= 1 && Rock.rocks == null)
+        //{
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //}
+        
         switch(reachedPos, waited, gotNextPos)
         {
             case (false, false, false):
@@ -69,6 +87,11 @@ public class Bird : MonoBehaviour
                 Reset();
             break;
         }
+    }
+
+    private void Update()
+    {
+        ResetLevel();
     }
 
     void Move()
@@ -135,5 +158,13 @@ public class Bird : MonoBehaviour
     void OnDestroy()
     {
         Destroy(posHighlight);
+    }
+
+    void ResetLevel()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
