@@ -7,7 +7,7 @@ public class HeartScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public static int health;
+    public int health;
     public Image heartsDisplay;
     public Sprite[] hearts;
 
@@ -35,9 +35,11 @@ public class HeartScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Rock") || collision.gameObject.tag.Equals("Bird") || collision.gameObject.tag.Equals("PlayerHurt"))
+        Debug.Log("We got hit!");
+        if (collision.gameObject.tag.Equals("Rock") 
+        || collision.gameObject.tag.Equals("Bird") 
+        || collision.gameObject.tag.Equals("PlayerHurt"))
         {
-            Debug.Log("We got hit!");
             Damage();
         }
     }
