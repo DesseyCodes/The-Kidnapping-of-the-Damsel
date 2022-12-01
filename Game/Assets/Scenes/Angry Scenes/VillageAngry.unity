@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &13537978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4744113682088415525, guid: 215933e10f3e8a446a084c8f30cffabd, type: 3}
+  m_PrefabInstance: {fileID: 4744113683431971353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!320 &13537979
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13537978}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 0715bfbe472a1c84794909925f4322ca, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &383982269
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +190,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &399620084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6360182143921832832, guid: 2fc2518e6bf338b4995a5361f6f86241, type: 3}
+  m_PrefabInstance: {fileID: 6360182144602994221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &399620090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399620084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: a4371e7e0da503a45a786f922e45c5a2, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 593107957}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &593107955
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70aee361357ae2c40bc612b245a0da7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitUntilEnd: 0
+  waitUntilEnd: 1
   messages:
   - Hmm...
   - I wonder where everyone is?
@@ -278,8 +335,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1256679050}
   - component: {fileID: 1256679049}
-  - component: {fileID: 1256679048}
   - component: {fileID: 1256679047}
+  - component: {fileID: 1256679051}
   m_Layer: 0
   m_Name: transition
   m_TagString: Untagged
@@ -300,27 +357,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 1256679048}
+  - {fileID: 1256679051}
   repeat: 1
   enterArea: 1
   exitArea: 0
   stayInArea: 0
   gameObjectTag: Player
   button: Fire1
---- !u!114 &1256679048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256679046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2bf252fec814ce46ad68d2adfc2fc4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitUntilEnd: 0
-  sceneIndex: 14
 --- !u!61 &1256679049
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -331,7 +374,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.05098152}
@@ -362,6 +405,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1256679051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256679046}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2bf252fec814ce46ad68d2adfc2fc4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitUntilEnd: 0
+  sceneIndex: 14
 --- !u!1 &1284002370
 GameObject:
   m_ObjectHideFlags: 0

@@ -1386,9 +1386,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1539632883}
-  - component: {fileID: 1539632882}
   - component: {fileID: 1539632884}
   - component: {fileID: 1539632885}
+  - component: {fileID: 1539632886}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -1396,47 +1396,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1539632882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539632880}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70aee361357ae2c40bc612b245a0da7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitUntilEnd: 1
-  messages:
-  - 'Good afternoon! I am mayor Jefferson, and today, we are gathered here to celebrate
-    The Kidnapping of the Damsel!
-
-'
-  - Every year, a week before the festival, a male and female pair of names is drawn.
-    The female name of the pair is to politely  be kidnapped by the birds
-  - The male of the pair is expected to go after her, and "save" her.
-  - The point of this ritual is to have the two bond over each other, and eventually
-    get married. Better trust is also built between humans and birds.
-  - Many years ago, a great human and bird war caused many birds to get their feathers
-    plucked, and humans to get their eyes pecked.
-  - Yes, I know. Painful.
-  - Anyways, the conflict was resolved and The Kidnapping of the Damsel was born.
-  - Now, let us reveal the boy and girl pair.
-  - For the boy...
-  - Eric Glen! Congratulations, young man!
-  - 'For the girl...
-
-'
-  - '[Main Character Name]! Congratulations, young lady!'
-  - Now, everyone. As you all know...
-  - Our damsel will be kidnapped in the dark of the night.
-  - In the morning, when we notice she's missing, Eric will begin his quest of going
-    after her.
-  - Everyone have a good evening, and let us all have a peaceful rest!
-  typingInterval: 0.1
-  responses: []
 --- !u!4 &1539632883
 Transform:
   m_ObjectHideFlags: 0
@@ -1471,7 +1430,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1539632882}
+        - m_Target: {fileID: 1539632886}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -1511,6 +1470,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 12
   timer: 3
+--- !u!114 &1539632886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539632880}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94055ab4194c2a4098cf75e82f6b2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitUntilEnd: 1
+  messages:
+  - 'Good afternoon! I am mayor Jefferson, and today, we are gathered here to celebrate
+    The Kidnapping of the Damsel!
+
+'
+  - Every year, a week before the festival, a male and female pair of names is drawn.
+    The female name of the pair is to politely  be kidnapped by the birds
+  - The male of the pair is expected to go after her, and "save" her.
+  - The point of this ritual is to have the two bond over each other, and eventually
+    get married. Better trust is also built between humans and birds.
+  - Many years ago, a great human and bird war caused many birds to get their feathers
+    plucked, and humans to get their eyes pecked.
+  - Yes, I know. Painful.
+  - Anyways, the conflict was resolved and The Kidnapping of the Damsel was born.
+  - Now, let us reveal the boy and girl pair.
+  - For the boy...
+  - Eric Glen! Congratulations, young man!
+  - 'For the girl...
+
+'
+  - Lyra Morrow! Congratulations, young lady!
+  - Now, everyone. As you all know...
+  - Our damsel will be kidnapped in the dark of the night.
+  - In the morning, when we notice she's missing, Eric will begin his quest of going
+    after her.
+  - Everyone have a good evening, and let us all have a peaceful rest!
+  typingInterval: 0.1
+  responses: []
 --- !u!1 &1568674650
 GameObject:
   m_ObjectHideFlags: 0
@@ -24215,7 +24215,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -73.51511, y: -4.576416, z: -60.86676, w: 16.123287}
+  m_margin: {x: -54.222076, y: 8.285576, z: -38.358276, w: 16.123287}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
