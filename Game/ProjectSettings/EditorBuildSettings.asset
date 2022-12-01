@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: a6257810ec9405b4ba0986eaa38ee59f
   - enabled: 1
-    path: Assets/Scenes/IntroCutscene.unity
+    path: Assets/Scenes/Cutscenes/IntroCutscene.unity
     guid: 7c5226fd204a03047b5a6d953bb6fae4
   - enabled: 1
     path: Assets/Scenes/Village.unity
@@ -39,6 +39,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level Boss.unity
     guid: f3c2db5024b54094a968afb6ba9e8a4f
   - enabled: 1
-    path: Assets/Scenes/HistoryCutscene.unity
+    path: Assets/Scenes/Cutscenes/HistoryCutscene.unity
     guid: 7e81d32c1bd86304bb98cf50f8ff9a76
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/SpeechScene.unity
+    guid: cd0c29b632e06324180c20b80f2ce6b5
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/KidnappingScene.unity
+    guid: 14a990af8797ff04b8980d9159ec175d
   m_configObjects: {}
