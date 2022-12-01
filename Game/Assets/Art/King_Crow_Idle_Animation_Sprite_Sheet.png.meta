@@ -1,16 +1,12 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 1d82d60f382e5c8408c37038b05938a4
-=======
-guid: 77c11a76f2ed2454f9438b6f62cef454
->>>>>>> d895f70f933c80425e1c6c53b3a91a5fec3315dd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -40,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -55,7 +51,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -66,8 +62,8 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
-  cookieLightType: 0
+  applyGammaDecoding: 1
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -86,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,28 +106,25 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-=======
   - serializedVersion: 3
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> d895f70f933c80425e1c6c53b3a91a5fec3315dd
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -144,19 +137,14 @@ TextureImporter:
         width: 56
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 91817f4f48474294d8dfc3d350263fa1
-      internalID: -1835581371
-=======
-      spriteID: 7eab8a78790f8db49a3459d59adad681
-      internalID: 146739256
->>>>>>> d895f70f933c80425e1c6c53b3a91a5fec3315dd
+      spriteID: 1a13d31ce74724d48a036fd565c78575
+      internalID: 453275589
       vertices: []
       indices: 
       edges: []
@@ -168,25 +156,16 @@ TextureImporter:
         x: 93
         y: 8
         width: 56
-<<<<<<< HEAD
-        height: 65
-=======
         height: 69
->>>>>>> d895f70f933c80425e1c6c53b3a91a5fec3315dd
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 31260a19d17f8544c8c5f24a6c429948
-      internalID: -652620336
-=======
-      spriteID: 96e3d81cd4aa7a740aa559fd633ee742
-      internalID: -1206273266
->>>>>>> d895f70f933c80425e1c6c53b3a91a5fec3315dd
+      spriteID: 61ec0ea5ab7575f43bb10bfbfb7eb50f
+      internalID: -2124390524
       vertices: []
       indices: 
       edges: []
@@ -194,7 +173,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 71b706c63b241fe49ad31e28efaa5d6f
     internalID: 0
     vertices: []
     indices: 
@@ -202,13 +181,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-<<<<<<< HEAD
-      King_Crow_Idle_Animation_Sprite_Sheet_0: -1835581371
-      King_Crow_Idle_Animation_Sprite_Sheet_1: -652620336
-=======
-      King_Crow_Idle_Animation_Sprite_Sheet_0: 146739256
-      King_Crow_Idle_Animation_Sprite_Sheet_1: -1206273266
->>>>>>> d895f70f933c80425e1c6c53b3a91a5fec3315dd
+      King_Crow_Idle_Animation_Sprite_Sheet_0: 453275589
+      King_Crow_Idle_Animation_Sprite_Sheet_1: -2124390524
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
