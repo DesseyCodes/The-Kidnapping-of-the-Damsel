@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
+// ADD: Allow for the name of each participant to be shown during the dialogue.
+// ADD: Allow for pausing and resuming a timeline.
 public class Dialogue : Action
 {
     [TextArea(3, 10)]
@@ -11,10 +14,12 @@ public class Dialogue : Action
     [Tooltip ("Interval between each letter.")]
     [SerializeField] float typingInterval;
     [SerializeField] string[] responses;
-
+    string[] names, dialogue;
     Image dialoguePanel;
     Image dialogueClose;
     TMP_Text dialogueText;
+    TMP_Text nameText;
+    PlayableDirector timeline;
 
     void Awake()
     {
@@ -24,6 +29,8 @@ public class Dialogue : Action
 
         dialoguePanel.gameObject.SetActive(false);
         dialogueClose.gameObject.SetActive(false);
+
+        timeline = Object.FindObjectOfType<PlayableDirector>();
     }
     void OnEnable()
     {
@@ -31,7 +38,10 @@ public class Dialogue : Action
         dialogueText.text = "";
         dialogueText.gameObject.SetActive(true);
         dialoguePanel.gameObject.SetActive(true);
-        
+
+        if(timeline != null)
+            timeline.playableGraph.GetRootPlayable(0).SetSpeed(0);
+
         StartCoroutine(ContinueDialogue());
     }
 
@@ -83,6 +93,10 @@ public class Dialogue : Action
                 canEnd = true;
             }
         }
+
+        if(timeline != null)
+            timeline.playableGraph.GetRootPlayable(0).SetSpeed(1);
+
         SignalToContinue();
     }
 }
