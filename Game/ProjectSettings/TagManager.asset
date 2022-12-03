@@ -9,6 +9,7 @@ TagManager:
   - Environmental
   - Rock
   - npcBoundary
+  - Bird
   layers:
   - Default
   - TransparentFX

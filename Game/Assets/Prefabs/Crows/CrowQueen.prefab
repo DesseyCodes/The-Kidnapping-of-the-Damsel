@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 8381186791968499123}
   m_Layer: 9
   m_Name: CrowQueen
-  m_TagString: Untagged
+  m_TagString: Bird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,6 +91,9 @@ MonoBehaviour:
   shootInterval: 1.5
   projectile: {fileID: 6186233299363127834, guid: c5316f7bcdcc60a44b8d0a76821efc80, type: 3}
   projSpawnPos: {fileID: 4783952775733451895}
+  bird1: {fileID: 0}
+  bird2: {fileID: 0}
+  birds: 2
 --- !u!114 &2337418104286070365
 MonoBehaviour:
   m_ObjectHideFlags: 0
