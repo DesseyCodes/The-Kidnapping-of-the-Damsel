@@ -123,28 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &13537978 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4744113682088415525, guid: 215933e10f3e8a446a084c8f30cffabd, type: 3}
-  m_PrefabInstance: {fileID: 4744113683431971353}
-  m_PrefabAsset: {fileID: 0}
---- !u!320 &13537979
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13537978}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 0715bfbe472a1c84794909925f4322ca, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings: []
-  m_ExposedReferences:
-    m_References: []
 --- !u!1 &383982269
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +179,7 @@ GameObject:
   - component: {fileID: 455777883}
   - component: {fileID: 455777882}
   m_Layer: 0
-  m_Name: FadeIn
+  m_Name: Timeline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,7 +194,7 @@ PlayableDirector:
   m_GameObject: {fileID: 455777881}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 17693c3d84800d442a3e05989e14ec20, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 0715bfbe472a1c84794909925f4322ca, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -224,6 +202,10 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -1191588896135039235, guid: 17693c3d84800d442a3e05989e14ec20, type: 2}
     value: {fileID: 6360182144602994222}
+  - key: {fileID: -99285326583113765, guid: 0715bfbe472a1c84794909925f4322ca, type: 2}
+    value: {fileID: 6360182144602994222}
+  - key: {fileID: -5394810111320389011, guid: 0715bfbe472a1c84794909925f4322ca, type: 2}
+    value: {fileID: 593107956}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &455777883
@@ -45742,6 +45724,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6360182143921832832, guid: 2fc2518e6bf338b4995a5361f6f86241, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360182143921832860, guid: 2fc2518e6bf338b4995a5361f6f86241, type: 3}
+      propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6360182143921832861, guid: 2fc2518e6bf338b4995a5361f6f86241, type: 3}
