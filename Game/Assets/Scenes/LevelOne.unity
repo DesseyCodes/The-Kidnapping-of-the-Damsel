@@ -345,8 +345,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6360182143921832832, guid: 2fc2518e6bf338b4995a5361f6f86241, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fc2518e6bf338b4995a5361f6f86241, type: 3}
+--- !u!95 &32793971 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6360182143921832834, guid: 2fc2518e6bf338b4995a5361f6f86241, type: 3}
+  m_PrefabInstance: {fileID: 32793970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &68130475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -477,6 +486,57 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faeff0a30cd42d44d97d8d0b32c5036d, type: 3}
+--- !u!1 &124487185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 124487187}
+  - component: {fileID: 124487186}
+  m_Layer: 0
+  m_Name: FadeIn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &124487186
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124487185}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 17693c3d84800d442a3e05989e14ec20, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -1191588896135039235, guid: 17693c3d84800d442a3e05989e14ec20, type: 2}
+    value: {fileID: 32793971}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &124487187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124487185}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.5530577, y: -4.3658915, z: 2.8567443}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &237173308
 GameObject:
   m_ObjectHideFlags: 0

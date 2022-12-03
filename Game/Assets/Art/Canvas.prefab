@@ -191,7 +191,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6360182142859788168}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00a56c541ade72345a8ad665b0a9505f, type: 3}
   m_Name: 
@@ -575,7 +575,6 @@ GameObject:
   - component: {fileID: 6360182143921832835}
   - component: {fileID: 6360182143921832863}
   - component: {fileID: 6360182143921832860}
-  - component: {fileID: 6360182143921832861}
   - component: {fileID: 6360182143921832834}
   - component: {fileID: 399620090}
   m_Layer: 5
@@ -584,7 +583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6360182143921832835
 RectTransform:
   m_ObjectHideFlags: 0
@@ -643,27 +642,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!320 &6360182143921832861
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6360182143921832832}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 74422f657afcf644abb6f7345e3cbc2c, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 527112777340480892, guid: 74422f657afcf644abb6f7345e3cbc2c, type: 2}
-    value: {fileID: 6360182143921832834}
-  - key: {fileID: -3483363238093551417, guid: 74422f657afcf644abb6f7345e3cbc2c, type: 2}
-    value: {fileID: 0}
-  m_ExposedReferences:
-    m_References: []
 --- !u!95 &6360182143921832834
 Animator:
   serializedVersion: 4
