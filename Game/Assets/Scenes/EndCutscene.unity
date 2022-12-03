@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 28935560}
-  - component: {fileID: 28935559}
+  - component: {fileID: 28935562}
   - component: {fileID: 28935561}
   m_Layer: 0
   m_Name: Dialogue
@@ -141,32 +141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &28935559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28935558}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70aee361357ae2c40bc612b245a0da7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitUntilEnd: 1
-  messages:
-  - Hey! Uhm...
-  - Thanks for saving me! I really appreciate it, but, uhm, I have something important
-    to tell you-
-  - NO! I'm not in love with you! Are you crazy? You cut people off and you're rude
-    to your Grandpa!
-  - 'What I wanted to tell you was that the birds didn''t mean to kidnap me. They
-    got the wrong address. '
-  - So erm...
-  - Now that that's over, wanna go back home and warn the other villagers that there
-    might be a war?...
-  typingInterval: 0.1
-  responses: []
 --- !u!4 &28935560
 Transform:
   m_ObjectHideFlags: 0
@@ -200,7 +174,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 28935559}
+        - m_Target: {fileID: 28935562}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -212,6 +186,32 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+--- !u!114 &28935562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28935558}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94055ab4194c2a4098cf75e82f6b2d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitUntilEnd: 1
+  messages:
+  - Hey! Uhm...
+  - Thanks for saving me! I really appreciate it, but, uhm, I have something important
+    to tell you-
+  - NO! I'm not in love with you! Are you crazy? You cut people off and you're rude
+    to your Grandpa!
+  - 'What I wanted to tell you was that the birds didn''t mean to kidnap me. They
+    got the wrong address. '
+  - So erm...
+  - Now that that's over, wanna go back home and warn the other villagers that there
+    might be a war?...
+  typingInterval: 0.1
+  responses: []
 --- !u!1001 &63924627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -315,7 +315,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6360182143921832832, guid: 2fc2518e6bf338b4995a5361f6f86241, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6360182143921832861, guid: 2fc2518e6bf338b4995a5361f6f86241, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2fc2518e6bf338b4995a5361f6f86241, type: 3}
 --- !u!1 &203021862
 GameObject:
@@ -329,14 +334,13 @@ GameObject:
   - component: {fileID: 203021865}
   - component: {fileID: 203021864}
   - component: {fileID: 203021866}
-  - component: {fileID: 203021867}
   m_Layer: 5
   m_Name: FadeImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &203021863
 RectTransform:
   m_ObjectHideFlags: 0
@@ -415,23 +419,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!320 &203021867
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203021862}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: fadb77d155a09094b823295790c03e0c, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings: []
-  m_ExposedReferences:
-    m_References: []
 --- !u!1 &268555813
 GameObject:
   m_ObjectHideFlags: 0
@@ -13703,7 +13690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
