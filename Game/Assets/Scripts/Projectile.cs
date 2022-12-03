@@ -32,7 +32,12 @@ public class Projectile : MonoBehaviour
 
         if(damageable != null)
             damageable.ChangeHP(-damage);
-        
+
+        HeartScript heartScript = other.gameObject.GetComponent<HeartScript>();
+
+        if(heartScript != null)
+            heartScript.Damage();
+ 
         Destroy(gameObject);
     }
 }

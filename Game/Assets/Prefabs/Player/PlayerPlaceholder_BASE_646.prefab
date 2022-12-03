@@ -247,9 +247,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b394d8c50ffc6664ca4dde129d2ef620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartNum: 1
+  health: 3
   heartsDisplay: {fileID: 0}
   hearts:
+  - {fileID: 21300000, guid: 8a66eaf74d3016645a99c79fedea473e, type: 3}
   - {fileID: 21300000, guid: 702a9b31ef6c04a4586a579dcd470828, type: 3}
   - {fileID: 21300000, guid: cb89cc649a999774aa47b856f8676ff9, type: 3}
   - {fileID: 21300000, guid: 9abbf32f1176c1d4da79362ebe51b49c, type: 3}
